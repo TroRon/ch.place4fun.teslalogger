@@ -1,0 +1,28 @@
+{
+  "id": "ch.place4fun.teslalogger",
+  "version": "1.0.0",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "TeslaLogger"
+  },
+  "description": {
+    "en": "Connect TeslaLogger to Homey"
+  },
+  "category": [
+    "tools"
+  ],
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Ronny Troxler",
+    "email": "ronny.troxler@bluewin.ch"
+  }
+}
