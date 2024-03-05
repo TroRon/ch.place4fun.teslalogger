@@ -1,0 +1,109 @@
+[
+    {
+        "type": "group",
+        "label": {
+          "de": "Geräte Einstellungen",
+          "en": "Device Settings"
+        },
+        "children": [
+          {
+            "id": "url",
+            "type": "text",
+            "label": { 
+              "de": "IP Adresse / DNS Name",
+              "en": "IP Address / DNS Name"
+            },
+            "value": "",
+            "hint": {
+              "de": "Bitte FQDN oder IP Adresse nutzen!",
+              "en": "Please use FQDN or IP address!"
+             }   
+          },
+          {
+            "id": "port",
+            "type": "text",
+            "label": { 
+              "de": "Port",
+              "en": "Port"
+            },
+            "value": "",
+            "hint": {
+              "de": "Der Port MUSS angegeben werden! Siehe dazu die Einstellungen von TeslaLogger.",
+              "en": "The port MUST be specified! See the TeslaLogger settings."
+            }   
+          },
+          {
+            "id": "carID",
+            "type": "text",
+            "label": { 
+              "de": "CAR ID",
+              "en": "CAR ID"
+            },
+            "value": "",
+            "hint": {
+              "de": "Die Car ID finden sie ebenfalls in den TeslaLogger Einstellungen.",
+              "en": "You can also find the Car ID in the TeslaLogger settings."
+            }   
+          }
+        ]
+      },
+      {
+        "type": "group",
+        "label": { 
+          "de": "Aktualisierungs-Intervall",
+          "en": "Update Interval"
+          },
+        "children": [
+       {
+              "id": "interval",
+              "type": "number",
+              "label": { 
+                "de": "Abruf-Intervall",
+                "en": "Fetch Interval"                
+              },
+              "hint": { 
+                "de": "Wähle ein Aktualisierungs-Intervall. Wähle eine Intervall bis zu 10 min., um Live-Updates vom Gerät zu ermöglichen.",
+                "en": "Choose an update interval. Select an interval of up to 10 mins to enable live updates from the device."
+               },
+              "min": 1,
+              "value": 1
+            },
+            {
+              "id": "interval_unit",
+              "type": "dropdown",
+              "label": { 
+                "de": "Intervall-Einheit",
+                "en": "Interval Unit"
+              },
+              "value": "min",
+              "values":[
+                  {
+                      "id": "min",
+                      "label":{
+                        "de": "Minuten",
+                        "en": "Minutes"
+                      }
+                  }
+              ]
+          }
+        ]
+      },
+      {
+        "type": "group",
+        "label": {
+          "en": "Assigned to car",
+          "de": "Mit Fahrzeug verknüpft",
+          "nl": "Toegekend aan auto"
+        },
+        "children": [
+          {
+            "$extends": "car_data_name",
+            "id": "car_data_name"
+          },
+          {
+            "$extends": "car_data_vin",
+            "id": "car_data_vin"
+          }
+        ]
+      }
+]

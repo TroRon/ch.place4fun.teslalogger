@@ -1,0 +1,58 @@
+{
+  "devices": {
+    "unavailable": "Das Gerät konnte im Netzwerk nicht erreicht werden."
+  },
+  "welcome": {
+    "titles": {
+      "header": "Einrichten Tesla-Logger (Allgemeine Infos)",
+      "page": "Das Einrichten ist sehr einfach ..."
+    },
+    "step_by_step": {
+      "intro": "Beim Klicken auf 'Fortsetzen' wird eine Einstellungsseite eingeblendet.<br><br>Auf dieser Seite müssen folgende Einstellungen vorgenommen werden:",
+      "steps": "<li>IP Adresse:<b>z.B. 192.168.10.1</b></li><li>Port Key: <b>5000</b></li><li>CAR ID: <b>1</b></li>",
+      "outro": "<b>WICHTIG:</b><br>Die Port Angabe ist <b>IMMER</b> erforderlich.<br><br>Falls ein DNS Service in Betrieb ist, kann das TeslaLogger Gerät auch mit seinem DNS Namen angesprochen werden."
+    },
+    "buttons": {
+      "continue": "Weiter"
+    }
+  },
+  "manual_input": {
+    "title": "Hinzufügen Tesla-Logger (Allgemeine Infos)",
+    "intro": "<i>Bitte geben Sie die angeforderten Daten für das Hinzufügen des Geräts ein.<br><br><br><b>WICHTIG:</b><br>Falls ein DNS Service in Betrieb ist, kann der Tesla-Logger auch mit seinem DNS Namen angesprochen werden.</i>",
+    "inputs": {
+      "name": {
+        "label": "Name <b>(optional)</b>:",
+        "placeholder": "Name der Instanz"
+      },
+      "url": {
+        "label": "IP Adresse / FQDN mit vorgestelltem http(s)://",
+        "placeholder": "Bitte FQDN oder IP Adresse mit vorgestelltem HTTP(s) nutzen!"
+      },
+      "port": {
+        "label": "Port:",
+        "placeholder": "5000"
+      },
+      "carID": {
+        "label": "CAR ID:",
+        "placeholder": "Hier bitten die CardID eintragen. Die Car ID finden sie ebenfalls in den TeslaLogger Einstellungen"
+      }
+    },
+    "buttons": {
+      "next": "Gerät hinzufügen"
+    }
+  },
+  "pair":{
+    "battery":{
+      "name": "Batterie"
+  },
+    "climate":{
+      "name": "Klima"
+  },
+    "location":{
+      "name": "Standort"
+  },
+    "media":{
+      "name": "Medien"
+  }
+  }
+}

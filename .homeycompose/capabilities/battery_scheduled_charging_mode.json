@@ -1,0 +1,70 @@
+{
+    "type": "enum",
+    "title": {
+        "de": "Definierter Zeitplan",
+        "en": "Defined Schedule",
+        "nl": "Gedefinieerd Schema",
+        "fr": "Calendrier défini",
+        "it": "Programma definito",
+        "sv": "Definierad tidtabell",
+        "no": "Definert tidsplan",
+        "es": "Horario definido",
+        "da": "Defineret tidsplan",
+        "ru": "Определенное расписание",
+        "pl": "Zdefiniowany harmonogram"
+    },
+    "uiComponent": "sensor",
+    "getable": true,
+    "setable": false,
+    "icon": "./assets/capability_icons/battery_scheduled_charging_mode.svg",
+    "values": [
+        {
+            "id": "Off",
+            "title": {
+                "en": "No timetable",
+                "de": "Kein Zeitplan",
+                "nl": "Geen dienstregeling",
+                "fr": "Pas d'horaire",
+                "it": "Nessun orario",
+                "sv": "Ingen tidtabell",
+                "no": "Ingen tidsplan",
+                "es": "Sin horario",
+                "da": "Ingen tidsplan",
+                "ru": "Нет расписания",
+                "pl": "Brak harmonogramu"
+            }
+        },
+        {
+            "id": "DepartBy",
+            "title": {
+                "en": "Load secondary tariff",
+                "de": "Nebentarif laden",
+                "nl": "Lading secundair tarief",
+                "fr": "Charger le tarif secondaire",
+                "it": "Carica tariffa secondaria",
+                "sv": "Ladda sekundär tariff",
+                "no": "Laste sekundær tariff",
+                "es": "Cargar tarifa secundaria",
+                "da": "Indlæs sekundær tarif",
+                "ru": "Загрузить вторичный тариф",
+                "pl": "Załaduj taryfę pomocniczą"
+            }
+        },
+        {
+            "id": "StartAt",
+            "title": {
+                "en": "Planned charging",
+                "de": "Geplantes Aufladen",
+                "nl": "Gepland opladen",
+                "fr": "Charge planifiée",
+                "it": "Carica pianificata",
+                "sv": "Planerad laddning",
+                "no": "Planlagt lading",
+                "es": "Carga planificada",
+                "da": "Planlagt opladning",
+                "ru": "Запланированная зарядка",
+                "pl": "Zaplanowane ładowanie"
+            }
+        }
+    ]
+}

@@ -1,0 +1,55 @@
+{
+    "type": "enum",
+    "title": {
+      "de": "Überhitzungsschutz",
+      "en": "Cabin Overheat Protection",
+      "nl": "Cabine Oververhittingsbeveiliging",
+      "fr": "Protection contre la surchauffe de la cabine",
+      "it": "Protezione da surriscaldamento dell'abitacolo",
+      "sv": "Kabinöverhettningsskydd",
+      "no": "Kabinoveropphetingsbeskyttelse",
+      "es": "Protección contra el sobrecalentamiento de la cabina",
+      "da": "Kabineoverophedningsbeskyttelse",
+      "ru": "Защита от перегрева салона",
+      "pl": "Ochrona przed przegrzaniem kabiny"
+    },
+    "insights": false,
+    "getable": true,
+    "setable": false,
+    "uiComponent": "sensor",
+    "icon": "/assets/capability_icons/climate_cabin_overheat_protection.svg",
+    "values": [
+      {
+        "id": "On",
+        "title": {
+          "de": "Eingeschaltet",
+          "en": "On",
+          "nl": "Aan",
+          "fr": "Activé",
+          "it": "Attivo",
+          "sv": "På",
+          "no": "På",
+          "es": "Encendido",
+          "da": "Tændt",
+          "ru": "Включено",
+          "pl": "Włączone"
+        }
+      },
+      {
+        "id": "Off",
+        "title": {
+          "de": "Ausgeschaltet",
+          "en": "Off",
+          "nl": "Uit",
+          "fr": "Désactivé",
+          "it": "Spento",
+          "sv": "Av",
+          "no": "Av",
+          "es": "Apagado",
+          "da": "Slukket",
+          "ru": "Выключено",
+          "pl": "Wyłączone"
+        }
+      }
+    ]
+  }

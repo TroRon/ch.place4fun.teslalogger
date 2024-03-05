@@ -1,0 +1,48 @@
+{
+  "id": "battery",
+  "name": {
+     "de": "02-Batterie-Informationen hinzufügen",
+     "en": "02-Batterie-Informationen hinzufügen"
+
+      },
+  "class": "sensor",
+  "capabilities": [
+    "battery_data_refresh",
+    "car_name",
+    "measure_battery_range",
+    "measure_battery_soc",
+    "battery_charge_limit_soc",
+    "battery_scheduled_charging_mode",
+    "battery_scheduled_charging_start",
+    "battery_off_peak_charging_times",
+    "battery_off_peak_hours_end_time",
+    "alarm_api_error",
+    "battery_last_update"
+  ],
+    "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+   },
+    "energy": {
+    "batteries": [
+        "OTHER"
+    ]
+    },
+    "pair": [
+        {
+            "id": "list_devices",
+            "template": "list_devices",
+            "navigation": {
+                "next": "add_devices"
+            }
+        },
+        {
+            "id": "add_devices",
+            "template": "add_devices",
+            "navigation": {
+                "prev": "list_devices"
+            }
+        }
+    ]
+}

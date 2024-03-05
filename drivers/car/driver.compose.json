@@ -1,0 +1,45 @@
+{
+  "id": "car",
+  "name": {
+     "de": "01-TeslaLogger verbinden",
+     "en": "01-TeslaLogger verbinden"
+      },
+  "class": "sensor",
+  "capabilities": [
+    "car_data_refresh",
+    "car_name",
+    "meter_car_odo",
+    "car_state",    
+    "car_sentry_mode",
+    "car_software_version",
+    "car_service_mode",
+    "measure_car_tpms_pressure_fl",
+    "measure_car_tpms_pressure_fr",
+    "measure_car_tpms_pressure_rl",
+    "measure_car_tpms_pressure_rr",
+    "alarm_api_error",
+    "car_last_update",
+    "car_vin"
+  ],
+    "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+   },
+   "energy": {
+    "batteries": [
+        "OTHER"
+    ]
+  },
+  "pair": [
+    {
+      "id": "welcome",
+      "next": "manual_input"
+    },
+    {
+      "id": "manual_input",
+      "prev": "welcome",
+      "next": "list_devices"
+    }
+    ]
+}

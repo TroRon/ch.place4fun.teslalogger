@@ -1,0 +1,57 @@
+{
+  "type": "enum",
+  "title": {
+    "de": "Hinten, rechts",
+    "en": "Rear Right",
+    "nl": "Achter Rechts",
+    "fr": "Arrière Droite",
+    "it": "Posteriore Destra",
+    "sv": "Bakre Höger",
+    "no": "Bakre Høyre",
+    "es": "Trasero Derecho",
+    "da": "Bageste Højre",
+    "ru": "Задний Правый",
+    "pl": "Tył Prawy"
+  },
+  "insights": false,
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/capability_icons/climate_seat_rear_right_level.svg",
+  "values": [
+    {
+      "id": "0",
+      "title": {
+        "de": "Aus",
+        "en": "Off",
+        "nl": "Uit",
+        "fr": "Éteint",
+        "it": "Spento",
+        "sv": "Av",
+        "no": "Av",
+        "es": "Apagado",
+        "da": "Fra",
+        "ru": "Выкл",
+        "pl": "Wyłączony"
+      }
+    },
+    {
+      "id": "1",
+      "title": {
+        "en": "1"
+      }
+    },
+    {
+      "id": "2",
+      "title": {
+        "en": "2"
+      }
+    },
+    {
+      "id": "3",
+      "title": {
+        "en": "3"
+      }
+    }
+  ]
+}

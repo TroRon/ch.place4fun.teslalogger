@@ -1,0 +1,46 @@
+{
+    "type": "enum",
+    "title": {
+        "de": "Nebentarif laden",
+        "en": "Off-peak charging",
+        "nl": "Daluren opladen",
+        "fr": "Recharge hors heures de pointe",
+        "it": "Ricarica fuori dalle ore di punta",
+        "sv": "Laddning under låg belastning",
+        "no": "Lading utenom høy belastning",
+        "es": "Carga en horas valle",
+        "da": "Opladning uden for spidsbelastning",
+        "ru": "Зарядка во время низкой нагрузки",
+        "pl": "Ładowanie poza godzinami szczytu"
+    },
+    "uiComponent": "sensor",
+    "getable": true,
+    "setable": false,
+    "icon": "./assets/capability_icons/battery_off_peak_charging_times.svg",
+    "values": [
+        {
+            "id": "all_week",
+            "title": {
+                "en": "Full week",
+                "de": "Ganzwöchig",
+                "nl": "De hele week"
+            }
+        },
+        {
+            "id": "weekdays",
+            "title": {
+                "en": "MO-FR",
+                "de": "MO-FR",
+                "nl": "MA-VR",
+                "fr": "LU-VE",
+                "it": "LU-VE",
+                "sv": "Må-Fr",
+                "no": "MA-FR",
+                "es": "LU-VI",
+                "da": "MA-FR",
+                "ru": "ПН-ПТ",
+                "pl": "PN-PT"
+            }
+        }
+    ]
+}

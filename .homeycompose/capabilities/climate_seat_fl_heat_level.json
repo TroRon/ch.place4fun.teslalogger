@@ -1,0 +1,57 @@
+{
+  "type": "enum",
+  "title": {
+    "de": "Fahrer",
+    "en": "Driver",
+    "nl": "Bestuurder",
+    "fr": "Chauffeur",
+    "it": "Autista",
+    "sv": "Förare",
+    "no": "Sjåfør",
+    "es": "Conductor",
+    "da": "Fører",
+    "ru": "Водитель",
+    "pl": "Kierowca"
+  },
+  "insights": false,
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/capability_icons/climate_seat_fl_heat_level.svg",
+  "values": [
+    {
+      "id": "0",
+      "title": {
+        "de": "Aus",
+        "en": "Off",
+        "nl": "Uit",
+        "fr": "Éteint",
+        "it": "Spento",
+        "sv": "Av",
+        "no": "Av",
+        "es": "Apagado",
+        "da": "Fra",
+        "ru": "Выкл",
+        "pl": "Wyłączony"
+      }
+    },
+    {
+      "id": "1",
+      "title": {
+        "en": "1"
+      }
+    },
+    {
+      "id": "2",
+      "title": {
+        "en": "2"
+      }
+    },
+    {
+      "id": "3",
+      "title": {
+        "en": "3"       
+      }
+    }
+  ]
+}

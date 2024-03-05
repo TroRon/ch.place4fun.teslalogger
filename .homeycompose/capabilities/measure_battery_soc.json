@@ -1,0 +1,13 @@
+{
+    "type": "number",
+    "title": {
+      "en": "SOC"
+    },
+    "getable": true,
+    "setable": false,
+    "insights": true,
+    "units": { 
+      "en": "%"
+     },
+     "icon": "./assets/capability_icons/battery_soc.svg"
+  }

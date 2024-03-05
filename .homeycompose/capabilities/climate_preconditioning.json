@@ -1,0 +1,73 @@
+{
+    "type": "boolean",
+    "title": {
+      "de": "Vorklimatisierung",
+      "en": "Preconditioning",
+      "nl": "Voorconditionering",
+      "fr": "Préconditionnement",
+      "it": "Precondizionamento",
+      "sv": "Förkonditionering",
+      "no": "Forhåndsbetingelse",
+      "es": "Preacondicionamiento",
+      "da": "Forbetingelse",
+      "ru": "Предварительная обработка",
+      "pl": "Przedkondycjonowanie"
+    },
+    "titleTrue":{
+      "de": "Vorklimatisierung aktiv",
+      "en": "Preconditioning active",
+      "nl": "Voorconditionering actief",
+      "fr": "Préconditionnement actif",
+      "it": "Precondizionamento attivo",
+      "sv": "Förkonditionering aktiv",
+      "no": "Forhåndsbetingelse aktiv",
+      "es": "Preacondicionamiento activo",
+      "da": "Forbetingelse aktiv",
+      "ru": "Активная предварительная обработка",
+      "pl": "Przedkondycjonowanie aktywne"
+    },
+    "titleFalse":{
+      "de": "Vorklimatisierung inaktiv",
+      "en": "Preconditioning inactive",
+      "nl": "Voorconditionering inactief",
+      "fr": "Préconditionnement inactif",
+      "it": "Precondizionamento inattivo",
+      "sv": "Förkonditionering inaktiv",
+      "no": "Forhåndsbetingelse inaktiv",
+      "es": "Preacondicionamiento inactivo",
+      "da": "Forbetingelse inaktiv",
+      "ru": "Неактивная предварительная обработка",
+      "pl": "Przedkondycjonowanie nieaktywne"
+    },
+    "insightsTitleTrue":{
+      "de": "Vorklimatisierung aktiv",
+      "en": "Preconditioning active",
+      "nl": "Voorconditionering actief",
+      "fr": "Préconditionnement actif",
+      "it": "Precondizionamento attivo",
+      "sv": "Förkonditionering aktiv",
+      "no": "Forhåndsbetingelse aktiv",
+      "es": "Preacondicionamiento activo",
+      "da": "Forbetingelse aktiv",
+      "ru": "Активная предварительная обработка",
+      "pl": "Przedkondycjonowanie aktywne"
+    },
+    "insightsTitleFalse":{
+      "de": "Vorklimatisierung inaktiv",
+      "en": "Preconditioning inactive",
+      "nl": "Voorconditionering inactief",
+      "fr": "Préconditionnement inactif",
+      "it": "Precondizionamento inattivo",
+      "sv": "Förkonditionering inaktiv",
+      "no": "Forhåndsbetingelse inaktiv",
+      "es": "Preacondicionamiento inactivo",
+      "da": "Forbetingelse inaktiv",
+      "ru": "Неактивная предварительная обработка",
+      "pl": "Przedkondycjonowanie nieaktywne"
+    },
+    "insights": true,
+    "getable": true,
+    "setable": true,
+    "uiComponent": "sensor",
+    "icon": "/assets/capability_icons/climate_preconditioning.svg" 
+}

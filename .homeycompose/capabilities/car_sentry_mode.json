@@ -1,0 +1,73 @@
+{
+    "type": "boolean",
+    "title": {
+      "de": "Sentry-Modus",
+      "en": "Sentry Mode",
+      "nl": "Sentry-modus",
+      "fr": "Mode Sentinelle",
+      "it": "Modalità sentinella",
+      "sv": "Sentry-läge",
+      "no": "Sentry-modus",
+      "es": "Modo centinela",
+      "da": "Sentry-tilstand",
+      "ru": "Режим сторожевого режима",
+      "pl": "Tryb strażnika"
+    },
+    "titleTrue":{
+      "de": "Sentry-Modus aktiviert",
+      "en": "Sentry Mode enabled",
+      "nl": "Sentry-modus ingeschakeld",
+      "fr": "Mode Sentinelle activé",
+      "it": "Modalità sentinella abilitata",
+      "sv": "Sentry-läge aktiverat",
+      "no": "Sentry-modus aktivert",
+      "es": "Modo centinela activado",
+      "da": "Sentry-tilstand aktiveret",
+      "ru": "Режим сторожевого режима включен",
+      "pl": "Tryb strażnika włączony"
+    },
+    "titleFalse":{
+      "de": "Sentry-Modus deaktiviert",
+      "en": "Sentry Mode disabled",
+      "nl": "Sentry-modus uitgeschakeld",
+      "fr": "Mode Sentinelle désactivé",
+      "it": "Modalità sentinella disabilitata",
+      "sv": "Sentry-läge inaktiverat",
+      "no": "Sentry-modus deaktivert",
+      "es": "Modo centinela desactivado",
+      "da": "Sentry-tilstand deaktiveret",
+      "ru": "Режим сторожевого режима отключен",
+      "pl": "Tryb strażnika wyłączony"
+    },
+    "insightsTitleTrue":{
+      "de": "Sentry-Modus aktiviert",
+      "en": "Sentry Mode enabled",
+      "nl": "Sentry-modus ingeschakeld",
+      "fr": "Mode Sentinelle activé",
+      "it": "Modalità sentinella abilitata",
+      "sv": "Sentry-läge aktiverat",
+      "no": "Sentry-modus aktivert",
+      "es": "Modo centinela activado",
+      "da": "Sentry-tilstand aktiveret",
+      "ru": "Режим сторожевого режима включен",
+      "pl": "Tryb strażnika włączony"
+    },
+    "insightsTitleFalse":{
+      "de": "Sentry-Modus deaktiviert",
+      "en": "Sentry Mode disabled",
+      "nl": "Sentry-modus uitgeschakeld",
+      "fr": "Mode Sentinelle désactivé",
+      "it": "Modalità sentinella disabilitata",
+      "sv": "Sentry-läge inaktiverat",
+      "no": "Sentry-modus deaktivert",
+      "es": "Modo centinela desactivado",
+      "da": "Sentry-tilstand deaktiveret",
+      "ru": "Режим сторожевого режима отключен",
+      "pl": "Tryb strażnika wyłączony"
+    },
+    "insights": true,
+    "getable": true,
+    "setable": true,
+    "uiComponent": "sensor",
+    "icon": "./assets/capability_icons/car_sentry_mode.svg"
+  }

@@ -1,0 +1,21 @@
+{
+    "type": "boolean",
+    "title": {
+      "de": "Verbindung verloren?",
+      "en": "Connection lost?",
+      "nl": "Verbinding verloren?",
+      "fr": "Connexion perdue?",
+      "it": "Connessione persa?",
+      "sv": "Anslutning förlorad?",
+      "no": "Tilkobling tapt?",
+      "es": "¿Conexión perdida?",
+      "da": "Forbindelse mistet?",
+      "ru": "Соединение потеряно?",
+      "pl": "Połączenie utracone?"
+    },
+    "getable": true,
+    "setable": true,
+    "uiComponent": "sensor",
+    "uiQuickAction": false,
+    "icon": "/assets/capability_icons/alarm_api_error.svg" 
+  }

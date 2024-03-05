@@ -1,0 +1,20 @@
+{
+    "type": "string",
+    "title": {
+      "de": "VIN",
+      "en": "VIN",
+      "nl": "VIN",
+      "fr": "VIN",
+      "it": "VIN",
+      "sv": "VIN",
+      "no": "VIN",
+      "es": "VIN",
+      "da": "VIN",
+      "ru": "VIN",
+      "pl": "VIN"
+    },
+    "insights": true,
+    "getable": true,
+    "setable": false,
+    "icon": "./assets/capability_icons/car_vin.svg"
+}

@@ -1,0 +1,57 @@
+{
+  "type": "enum",
+  "title": {
+    "de": "Lenkradheizung",
+    "en": "Steering Wheel Heating",
+    "nl": "Stuurwielverwarming",
+    "fr": "Chauffage du volant",
+    "it": "Riscaldamento del volante",
+    "sv": "Rattvärme",
+    "no": "Rattvarme",
+    "es": "Calefacción del volante",
+    "da": "Ratvarme",
+    "ru": "Подогрев руля",
+    "pl": "Podgrzewanie kierownicy"
+  },
+  "insights": false,
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/capability_icons/climate_steering_wheel_heat_level.svg",
+  "values": [
+    {
+      "id": "0",
+      "title": {
+        "de": "Aus",
+        "en": "Off",
+        "nl": "Uit",
+        "fr": "Éteint",
+        "it": "Spento",
+        "sv": "Av",
+        "no": "Av",
+        "es": "Apagado",
+        "da": "Fra",
+        "ru": "Выкл",
+        "pl": "Wyłączony"
+      }
+    },
+    {
+      "id": "1",
+      "title": {
+        "en": "1"
+      }
+    },
+    {
+      "id": "2",
+      "title": {
+        "en": "2"
+      }
+    },
+    {
+      "id": "3",
+      "title": {
+        "en": "3"
+      }
+    }
+  ]
+}

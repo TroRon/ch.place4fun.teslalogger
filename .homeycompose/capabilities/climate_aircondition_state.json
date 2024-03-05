@@ -1,0 +1,55 @@
+{
+    "type": "enum",
+    "title": {
+      "de": "Klimaanlage ein?",
+      "en": "Is air conditioning on?",
+      "nl": "Is de airconditioning aan?",
+      "fr": "La climatisation est-elle activée?",
+      "it": "L'aria condizionata è accesa?",
+      "sv": "Är luftkonditioneringen på?",
+      "no": "Er airconditionen på?",
+      "es": "¿Está encendido el aire acondicionado?",
+      "da": "Er airconditionen tændt?",
+      "ru": "Включен ли кондиционер?",
+      "pl": "Czy klimatyzacja jest włączona?"
+    },
+    "insights": false,
+    "getable": true,
+    "setable": false,
+    "uiComponent": "sensor",
+    "icon": "/assets/capability_icons/climate_aircondition_state.svg",
+    "values": [
+      {
+        "id": "true",
+        "title": {
+          "de": "Eingeschaltet",
+          "en": "On",
+          "nl": "Aan",
+          "fr": "Activé",
+          "it": "Acceso",
+          "sv": "På",
+          "no": "På",
+          "es": "Encendido",
+          "da": "Tændt",
+          "ru": "Включено",
+          "pl": "Włączone"
+        }
+      },
+      {
+        "id": "false",
+       "title": {
+          "de": "Ausgeschaltet",
+          "en": "Off",
+          "nl": "Uit",
+          "fr": "Désactivé",
+          "it": "Spento",
+          "sv": "Av",
+          "no": "Av",
+          "es": "Apagado",
+          "da": "Slukket",
+          "ru": "Выключено",
+          "pl": "Wyłączone"    
+        }
+      }
+    ]
+  }

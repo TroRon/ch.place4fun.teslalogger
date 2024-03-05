@@ -1,0 +1,20 @@
+{
+    "type": "string",
+    "title": {
+      "de": "Fahrzeug Name",
+      "en": "Car Name",
+      "nl": "Autonaam",
+      "fr": "Nom de la voiture",
+      "it": "Nome dell'auto",
+      "sv": "Bilnamn",
+      "no": "Bilnavn",
+      "es": "Nombre del coche",
+      "da": "Bilnavn",
+      "ru": "Имя автомобиля",
+      "pl": "Nazwa samochodu"
+    },
+    "insights": true,
+    "getable": true,
+    "setable": false,
+    "icon": "./assets/capability_icons/car_name.svg"
+}

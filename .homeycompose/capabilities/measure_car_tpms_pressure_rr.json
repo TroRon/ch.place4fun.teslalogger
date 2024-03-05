@@ -1,0 +1,22 @@
+{
+    "type": "number",
+    "title": {
+      "de": "TPMS hinten rechts",
+      "en": "TPMS rear right",
+      "nl": "TPMS achter rechts",
+      "fr": "TPMS arrière droit",
+      "it": "TPMS posteriore destro",
+      "sv": "TPMS bakre höger",
+      "no": "TPMS bakre høyre",
+      "es": "TPMS trasero derecho",
+      "da": "TPMS baghøjre",
+      "ru": "TPMS задний правый",
+      "pl": "TPMS tył prawy"
+    },
+    "units": "Bar",
+    "decimals": 2,
+    "insights": true,
+    "getable": true,
+    "setable": false,
+    "icon": "./assets/capability_icons/measure_car_tpms_pressure.svg"
+  }

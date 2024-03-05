@@ -1,0 +1,34 @@
+{
+    "type": "number",
+    "title": {
+      "de": "Temp. Beifahrer",
+      "en": "Passenger Temperature",
+      "nl": "Passagierstemperatuur",
+      "fr": "Température passager",
+      "it": "Temperatura passeggero",
+      "sv": "Passagerartemperatur",
+      "no": "Passasjertemperatur",
+      "es": "Temperatura del pasajero",
+      "da": "Passagertemperatur",
+      "ru": "Температура пассажира",
+      "pl": "Temperatura pasażera"
+    },
+    "getable": true,
+    "setable": false,
+    "insights": true,
+    "units": { 
+      "de": "Grad",
+      "en": "Degree",
+      "nl": "Graad",
+      "fr": "Degré",
+      "it": "Grado",
+      "sv": "Grad",
+      "no": "Grad",
+      "es": "Grado",
+      "da": "Grad",
+      "ru": "Градус",
+      "pl": "Stopień"
+     },
+
+     "icon": "./assets/capability_icons/climate_passenger_temp_setting.svg"
+  }

@@ -1,0 +1,73 @@
+{
+    "type": "boolean",
+    "title": {
+      "de": "Service-Modus",
+      "en": "Service Mode",
+      "nl": "Service Modus",
+      "fr": "Mode de service",
+      "it": "Modalità di servizio",
+      "sv": "Service-läge",
+      "no": "Service-modus",
+      "es": "Modo de servicio",
+      "da": "Service-tilstand",
+      "ru": "Режим обслуживания",
+      "pl": "Tryb serwisowy"
+    },
+    "titleTrue":{
+      "de": "Service-Modus aktiviert",
+      "en": "Service Mode enabled",
+      "nl": "Service Modus ingeschakeld",
+      "fr": "Mode de service activé",
+      "it": "Modalità di servizio abilitata",
+      "sv": "Service-läge aktiverat",
+      "no": "Service-modus aktivert",
+      "es": "Modo de servicio habilitado",
+      "da": "Service-tilstand aktiveret",
+      "ru": "Режим обслуживания включен",
+      "pl": "Tryb serwisowy włączony"
+    },
+    "titleFalse":{
+      "de": "Service-Modus deaktiviert",
+      "en": "Service Mode disabled",
+      "nl": "Service Modus uitgeschakeld",
+      "fr": "Mode de service désactivé",
+      "it": "Modalità di servizio disabilitata",
+      "sv": "Service-läge inaktiverat",
+      "no": "Service-modus deaktivert",
+      "es": "Modo de servicio deshabilitado",
+      "da": "Service-tilstand deaktiveret",
+      "ru": "Режим обслуживания отключен",
+      "pl": "Tryb serwisowy wyłączony"
+    },
+    "insightsTitleTrue":{
+      "de": "Service-Modus aktiviert",
+      "en": "Service Mode enabled",
+      "nl": "Service Modus ingeschakeld",
+      "fr": "Mode de service activé",
+      "it": "Modalità di servizio abilitata",
+      "sv": "Service-läge aktiverat",
+      "no": "Service-modus aktivert",
+      "es": "Modo de servicio habilitado",
+      "da": "Service-tilstand aktiveret",
+      "ru": "Режим обслуживания включен",
+      "pl": "Tryb serwisowy włączony"
+    },
+    "insightsTitleFalse":{
+      "de": "Service-Modus deaktiviert",
+      "en": "Service Mode disabled",
+      "nl": "Service Modus uitgeschakeld",
+      "fr": "Mode de service désactivé",
+      "it": "Modalità di servizio disabilitata",
+      "sv": "Service-läge inaktiverat",
+      "no": "Service-modus deaktivert",
+      "es": "Modo de servicio deshabilitado",
+      "da": "Service-tilstand deaktiveret",
+      "ru": "Режим обслуживания отключен",
+      "pl": "Tryb serwisowy wyłączony"
+    },
+    "insights": true,
+    "getable": true,
+    "setable": true,
+    "uiComponent": "sensor",
+    "icon": "./assets/capability_icons/car_service_mode.svg"
+  }

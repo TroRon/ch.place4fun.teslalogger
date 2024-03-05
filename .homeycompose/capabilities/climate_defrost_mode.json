@@ -1,0 +1,55 @@
+{
+    "type": "enum",
+    "title": {
+      "de": "Fahrzeug enteisen",
+      "en": "Vehicle defrost",
+      "nl": "Voertuig ontdooien",
+      "fr": "Désembuage du véhicule",
+      "it": "Sbrinamento veicolo",
+      "sv": "Bil avfrostning",
+      "no": "Kjøretøy avriming",
+      "es": "Descongelación del vehículo",
+      "da": "Køretøj afisning",
+      "ru": "Размораживание автомобиля",
+      "pl": "Odmrażanie pojazdu"
+    },
+    "insights": false,
+    "getable": true,
+    "setable": false,
+    "uiComponent": "sensor",
+    "icon": "/assets/capability_icons/climate_defrost_mode.svg",
+    "values": [
+      {
+        "id": "1",
+        "title": {
+          "de": "Eingeschaltet",
+          "en": "On",
+          "nl": "Aan",
+          "fr": "Activé",
+          "it": "Acceso",
+          "sv": "På",
+          "no": "På",
+          "es": "Encendido",
+          "da": "Tændt",
+          "ru": "Включено",
+          "pl": "Włączone"
+        }
+      },
+      {
+        "id": "0",
+        "title": {
+          "de": "Ausgeschaltet",
+          "en": "Off",
+          "nl": "Uit",
+          "fr": "Désactivé",
+          "it": "Spento",
+          "sv": "Av",
+          "no": "Av",
+          "es": "Apagado",
+          "da": "Slukket",
+          "ru": "Выключено",
+          "pl": "Wyłączone"
+        }
+      }
+    ]
+  }

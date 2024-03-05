@@ -1,3 +1,2129 @@
 {
-  "_comment": "This file is generated. Please edit .homeycompose/app.json instead."
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "ch.place4fun.teslalogger",
+  "version": "0.0.1",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "brandColor": "#000000",
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "TeslaLogger"
+  },
+  "description": {
+    "en": "Connect TeslaLogger to Homey"
+  },
+  "category": [
+    "tools"
+  ],
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Ronny Troxler",
+    "email": "ronny.troxler@bluewin.ch"
+  },
+  "drivers": [
+    {
+      "id": "battery",
+      "name": {
+        "de": "02-Batterie-Informationen hinzufügen",
+        "en": "02-Batterie-Informationen hinzufügen"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "battery_data_refresh",
+        "car_name",
+        "measure_battery_range",
+        "measure_battery_soc",
+        "battery_charge_limit_soc",
+        "battery_scheduled_charging_mode",
+        "battery_scheduled_charging_start",
+        "battery_off_peak_charging_times",
+        "battery_off_peak_hours_end_time",
+        "alarm_api_error",
+        "battery_last_update"
+      ],
+      "images": {
+        "small": "/drivers/battery/assets/images/small.png",
+        "large": "/drivers/battery/assets/images/large.png",
+        "xlarge": "/drivers/battery/assets/images/xlarge.png"
+      },
+      "energy": {
+        "batteries": [
+          "OTHER"
+        ]
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices",
+          "navigation": {
+            "prev": "list_devices"
+          }
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Assigned to car",
+            "de": "Mit Fahrzeug verknüpft",
+            "nl": "Toegekend aan auto"
+          },
+          "children": [
+            {
+              "id": "car_data_name",
+              "type": "label",
+              "label": {
+                "en": "Name"
+              },
+              "value": ""
+            },
+            {
+              "id": "car_data_vin",
+              "type": "label",
+              "label": {
+                "en": "VIN"
+              },
+              "value": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "car",
+      "name": {
+        "de": "01-TeslaLogger verbinden",
+        "en": "01-TeslaLogger verbinden"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "car_data_refresh",
+        "car_name",
+        "meter_car_odo",
+        "car_state",
+        "car_sentry_mode",
+        "car_software_version",
+        "car_service_mode",
+        "measure_car_tpms_pressure_fl",
+        "measure_car_tpms_pressure_fr",
+        "measure_car_tpms_pressure_rl",
+        "measure_car_tpms_pressure_rr",
+        "alarm_api_error",
+        "car_last_update",
+        "car_vin"
+      ],
+      "images": {
+        "small": "/drivers/car/assets/images/small.png",
+        "large": "/drivers/car/assets/images/large.png",
+        "xlarge": "/drivers/car/assets/images/xlarge.png"
+      },
+      "energy": {
+        "batteries": [
+          "OTHER"
+        ]
+      },
+      "pair": [
+        {
+          "id": "welcome",
+          "next": "manual_input"
+        },
+        {
+          "id": "manual_input",
+          "prev": "welcome",
+          "next": "list_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "de": "Geräte Einstellungen",
+            "en": "Device Settings"
+          },
+          "children": [
+            {
+              "id": "url",
+              "type": "text",
+              "label": {
+                "de": "IP Adresse / DNS Name",
+                "en": "IP Address / DNS Name"
+              },
+              "value": "",
+              "hint": {
+                "de": "Bitte FQDN oder IP Adresse nutzen!",
+                "en": "Please use FQDN or IP address!"
+              }
+            },
+            {
+              "id": "port",
+              "type": "text",
+              "label": {
+                "de": "Port",
+                "en": "Port"
+              },
+              "value": "",
+              "hint": {
+                "de": "Der Port MUSS angegeben werden! Siehe dazu die Einstellungen von TeslaLogger.",
+                "en": "The port MUST be specified! See the TeslaLogger settings."
+              }
+            },
+            {
+              "id": "carID",
+              "type": "text",
+              "label": {
+                "de": "CAR ID",
+                "en": "CAR ID"
+              },
+              "value": "",
+              "hint": {
+                "de": "Die Car ID finden sie ebenfalls in den TeslaLogger Einstellungen.",
+                "en": "You can also find the Car ID in the TeslaLogger settings."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "de": "Aktualisierungs-Intervall",
+            "en": "Update Interval"
+          },
+          "children": [
+            {
+              "id": "interval",
+              "type": "number",
+              "label": {
+                "de": "Abruf-Intervall",
+                "en": "Fetch Interval"
+              },
+              "hint": {
+                "de": "Wähle ein Aktualisierungs-Intervall. Wähle eine Intervall bis zu 10 min., um Live-Updates vom Gerät zu ermöglichen.",
+                "en": "Choose an update interval. Select an interval of up to 10 mins to enable live updates from the device."
+              },
+              "min": 1,
+              "value": 1
+            },
+            {
+              "id": "interval_unit",
+              "type": "dropdown",
+              "label": {
+                "de": "Intervall-Einheit",
+                "en": "Interval Unit"
+              },
+              "value": "min",
+              "values": [
+                {
+                  "id": "min",
+                  "label": {
+                    "de": "Minuten",
+                    "en": "Minutes"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Assigned to car",
+            "de": "Mit Fahrzeug verknüpft",
+            "nl": "Toegekend aan auto"
+          },
+          "children": [
+            {
+              "id": "car_data_name",
+              "type": "label",
+              "label": {
+                "en": "Name"
+              },
+              "value": ""
+            },
+            {
+              "id": "car_data_vin",
+              "type": "label",
+              "label": {
+                "en": "VIN"
+              },
+              "value": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "climate",
+      "name": {
+        "de": "03-Klima-Informationen",
+        "en": "03-Klima-Informationen"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "climate_data_refresh",
+        "climate_driver_temp_setting",
+        "climate_passenger_temp_setting",
+        "measure_climate_temperature_in",
+        "measure_climate_temperature_out",
+        "climate_seat_fl_heat_level",
+        "climate_seat_fr_heat_level",
+        "climate_seat_rear_left_level",
+        "climate_seat_rear_center_level",
+        "climate_seat_rear_right_level",
+        "climate_aircondition_state",
+        "climate_preconditioning_times",
+        "climate_preconditioning",
+        "climate_defrost_mode",
+        "climate_cabin_overheat_protection",
+        "alarm_api_error",
+        "climate_last_update"
+      ],
+      "images": {
+        "small": "/drivers/climate/assets/images/small.png",
+        "large": "/drivers/climate/assets/images/large.png",
+        "xlarge": "/drivers/climate/assets/images/xlarge.png"
+      },
+      "energy": {
+        "batteries": [
+          "OTHER"
+        ]
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices",
+          "navigation": {
+            "prev": "list_devices"
+          }
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Assigned to car",
+            "de": "Mit Fahrzeug verknüpft",
+            "nl": "Toegekend aan auto"
+          },
+          "children": [
+            {
+              "id": "car_data_name",
+              "type": "label",
+              "label": {
+                "en": "Name"
+              },
+              "value": ""
+            },
+            {
+              "id": "car_data_vin",
+              "type": "label",
+              "label": {
+                "en": "VIN"
+              },
+              "value": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "location",
+      "name": {
+        "de": "04-Standort-Informationen",
+        "en": "04-Standort-Informationen"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "location_data_refresh",
+        "measure_location_latitude",
+        "measure_location_longitude",
+        "location_name",
+        "alarm_api_error",
+        "location_last_update"
+      ],
+      "images": {
+        "small": "/drivers/location/assets/images/small.png",
+        "large": "/drivers/location/assets/images/large.png",
+        "xlarge": "/drivers/location/assets/images/xlarge.png"
+      },
+      "energy": {
+        "batteries": [
+          "OTHER"
+        ]
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices",
+          "navigation": {
+            "prev": "list_devices"
+          }
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Assigned to car",
+            "de": "Mit Fahrzeug verknüpft",
+            "nl": "Toegekend aan auto"
+          },
+          "children": [
+            {
+              "id": "car_data_name",
+              "type": "label",
+              "label": {
+                "en": "Name"
+              },
+              "value": ""
+            },
+            {
+              "id": "car_data_vin",
+              "type": "label",
+              "label": {
+                "en": "VIN"
+              },
+              "value": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "media",
+      "name": {
+        "de": "05-Medien-Informationen",
+        "en": "05-Medien-Informationen"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "media_data_refresh",
+        "speaker_artist",
+        "speaker_album",
+        "speaker_track",
+        "speaker_duration",
+        "speaker_position",
+        "alarm_api_error",
+        "media_last_update"
+      ],
+      "images": {
+        "small": "/drivers/media/assets/images/small.png",
+        "large": "/drivers/media/assets/images/large.png",
+        "xlarge": "/drivers/media/assets/images/xlarge.png"
+      },
+      "energy": {
+        "batteries": [
+          "OTHER"
+        ]
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices",
+          "navigation": {
+            "prev": "list_devices"
+          }
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Assigned to car",
+            "de": "Mit Fahrzeug verknüpft",
+            "nl": "Toegekend aan auto"
+          },
+          "children": [
+            {
+              "id": "car_data_name",
+              "type": "label",
+              "label": {
+                "en": "Name"
+              },
+              "value": ""
+            },
+            {
+              "id": "car_data_vin",
+              "type": "label",
+              "label": {
+                "en": "VIN"
+              },
+              "value": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "alarm_api_error": {
+      "type": "boolean",
+      "title": {
+        "de": "Verbindung verloren?",
+        "en": "Connection lost?",
+        "nl": "Verbinding verloren?",
+        "fr": "Connexion perdue?",
+        "it": "Connessione persa?",
+        "sv": "Anslutning förlorad?",
+        "no": "Tilkobling tapt?",
+        "es": "¿Conexión perdida?",
+        "da": "Forbindelse mistet?",
+        "ru": "Соединение потеряно?",
+        "pl": "Połączenie utracone?"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "sensor",
+      "uiQuickAction": false,
+      "icon": "/assets/capability_icons/alarm_api_error.svg"
+    },
+    "battery_charge_limit_soc": {
+      "type": "number",
+      "title": {
+        "de": "Ladelimit",
+        "en": "Charge limit",
+        "nl": "Laadlimiet",
+        "fr": "Limite de charge",
+        "it": "Limite di carica",
+        "sv": "Laddningsgräns",
+        "no": "Ladegrense",
+        "es": "Límite de carga",
+        "da": "Opladningsgrænse",
+        "ru": "Предел заряда",
+        "pl": "Limit ładowania"
+      },
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "%"
+      },
+      "icon": "./assets/capability_icons/battery_charge_limit_soc.svg"
+    },
+    "battery_data_refresh": {
+      "type": "boolean",
+      "title": {
+        "de": "Aktualisieren",
+        "en": "Refresh",
+        "nl": "Vernieuwen",
+        "fr": "Actualiser",
+        "it": "Aggiorna",
+        "sv": "Uppdatera",
+        "no": "Oppdater",
+        "es": "Actualizar",
+        "da": "Opdater",
+        "ru": "Обновить",
+        "pl": "Odśwież"
+      },
+      "insights": false,
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button",
+      "icon": "./assets/capability_icons/refresh.svg"
+    },
+    "battery_last_update": {
+      "type": "string",
+      "title": {
+        "de": "Letzter Abgleich",
+        "en": "Last Update",
+        "nl": "Laatste update",
+        "fr": "Dernière mise à jour",
+        "it": "Ultimo aggiornamento",
+        "sv": "Senaste uppdatering",
+        "no": "Siste oppdatering",
+        "es": "Última actualización",
+        "da": "Seneste opdatering",
+        "ru": "Последнее обновление",
+        "pl": "Ostatnia aktualizacja"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "sensor",
+      "uiQuickAction": false,
+      "icon": "./assets/capability_icons/last_update.svg"
+    },
+    "battery_off_peak_charging_times": {
+      "type": "enum",
+      "title": {
+        "de": "Nebentarif laden",
+        "en": "Off-peak charging",
+        "nl": "Daluren opladen",
+        "fr": "Recharge hors heures de pointe",
+        "it": "Ricarica fuori dalle ore di punta",
+        "sv": "Laddning under låg belastning",
+        "no": "Lading utenom høy belastning",
+        "es": "Carga en horas valle",
+        "da": "Opladning uden for spidsbelastning",
+        "ru": "Зарядка во время низкой нагрузки",
+        "pl": "Ładowanie poza godzinami szczytu"
+      },
+      "uiComponent": "sensor",
+      "getable": true,
+      "setable": false,
+      "icon": "./assets/capability_icons/battery_off_peak_charging_times.svg",
+      "values": [
+        {
+          "id": "all_week",
+          "title": {
+            "en": "Full week",
+            "de": "Ganzwöchig",
+            "nl": "De hele week"
+          }
+        },
+        {
+          "id": "weekdays",
+          "title": {
+            "en": "MO-FR",
+            "de": "MO-FR",
+            "nl": "MA-VR",
+            "fr": "LU-VE",
+            "it": "LU-VE",
+            "sv": "Må-Fr",
+            "no": "MA-FR",
+            "es": "LU-VI",
+            "da": "MA-FR",
+            "ru": "ПН-ПТ",
+            "pl": "PN-PT"
+          }
+        }
+      ]
+    },
+    "battery_off_peak_hours_end_time": {
+      "type": "string",
+      "title": {
+        "de": "Nebentarif endet um",
+        "en": "Off-peak hours end at",
+        "nl": "Daluren eindigen om",
+        "fr": "Les heures creuses se terminent à",
+        "it": "Le ore fuori picco terminano alle",
+        "sv": "Lågpristimmarna slutar kl",
+        "no": "Lavpristimene slutter kl",
+        "es": "Las horas fuera de pico terminan a las",
+        "da": "Lavpristimerne slutter kl",
+        "ru": "Низкий тариф заканчивается в",
+        "pl": "Godziny poza szczytem kończą się o"
+      },
+      "getable": true,
+      "setable": false,
+      "icon": "./assets/capability_icons/battery_off_peak_hours_end_time.svg"
+    },
+    "battery_scheduled_charging_mode": {
+      "type": "enum",
+      "title": {
+        "de": "Definierter Zeitplan",
+        "en": "Defined Schedule",
+        "nl": "Gedefinieerd Schema",
+        "fr": "Calendrier défini",
+        "it": "Programma definito",
+        "sv": "Definierad tidtabell",
+        "no": "Definert tidsplan",
+        "es": "Horario definido",
+        "da": "Defineret tidsplan",
+        "ru": "Определенное расписание",
+        "pl": "Zdefiniowany harmonogram"
+      },
+      "uiComponent": "sensor",
+      "getable": true,
+      "setable": false,
+      "icon": "./assets/capability_icons/battery_scheduled_charging_mode.svg",
+      "values": [
+        {
+          "id": "Off",
+          "title": {
+            "en": "No timetable",
+            "de": "Kein Zeitplan",
+            "nl": "Geen dienstregeling",
+            "fr": "Pas d'horaire",
+            "it": "Nessun orario",
+            "sv": "Ingen tidtabell",
+            "no": "Ingen tidsplan",
+            "es": "Sin horario",
+            "da": "Ingen tidsplan",
+            "ru": "Нет расписания",
+            "pl": "Brak harmonogramu"
+          }
+        },
+        {
+          "id": "DepartBy",
+          "title": {
+            "en": "Load secondary tariff",
+            "de": "Nebentarif laden",
+            "nl": "Lading secundair tarief",
+            "fr": "Charger le tarif secondaire",
+            "it": "Carica tariffa secondaria",
+            "sv": "Ladda sekundär tariff",
+            "no": "Laste sekundær tariff",
+            "es": "Cargar tarifa secundaria",
+            "da": "Indlæs sekundær tarif",
+            "ru": "Загрузить вторичный тариф",
+            "pl": "Załaduj taryfę pomocniczą"
+          }
+        },
+        {
+          "id": "StartAt",
+          "title": {
+            "en": "Planned charging",
+            "de": "Geplantes Aufladen",
+            "nl": "Gepland opladen",
+            "fr": "Charge planifiée",
+            "it": "Carica pianificata",
+            "sv": "Planerad laddning",
+            "no": "Planlagt lading",
+            "es": "Carga planificada",
+            "da": "Planlagt opladning",
+            "ru": "Запланированная зарядка",
+            "pl": "Zaplanowane ładowanie"
+          }
+        }
+      ]
+    },
+    "battery_scheduled_charging_start": {
+      "type": "string",
+      "title": {
+        "de": "Letzter Geplanter Ladestart",
+        "en": "Last Scheduled Charging Start",
+        "nl": "Laatste Geplande Laadstart",
+        "fr": "Dernier Départ de Charge Programmé",
+        "it": "Ultimo Avvio di Ricarica Programmato",
+        "sv": "Senaste Planerade Laddningsstart",
+        "no": "Siste Planlagte Lading Start",
+        "es": "Último Inicio de Carga Programado",
+        "da": "Seneste Planlagte Opladningsstart",
+        "ru": "Последнее запланированное начало зарядки",
+        "pl": "Ostatni Zaplanowany Start Ładowania"
+      },
+      "getable": true,
+      "setable": false,
+      "icon": "./assets/capability_icons/battery_scheduled_charging_start.svg"
+    },
+    "car_data_refresh": {
+      "type": "boolean",
+      "title": {
+        "de": "Aktualisieren",
+        "en": "Refresh",
+        "nl": "Vernieuwen",
+        "fr": "Actualiser",
+        "it": "Aggiorna",
+        "sv": "Uppdatera",
+        "no": "Oppdater",
+        "es": "Actualizar",
+        "da": "Opdater",
+        "ru": "Обновить",
+        "pl": "Odśwież"
+      },
+      "insights": false,
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button",
+      "icon": "./assets/capability_icons/refresh.svg"
+    },
+    "car_last_update": {
+      "type": "string",
+      "title": {
+        "de": "Letzter Abgleich",
+        "en": "Last Update",
+        "nl": "Laatste update",
+        "fr": "Dernière mise à jour",
+        "it": "Ultimo aggiornamento",
+        "sv": "Senaste uppdatering",
+        "no": "Siste oppdatering",
+        "es": "Última actualización",
+        "da": "Seneste opdatering",
+        "ru": "Последнее обновление",
+        "pl": "Ostatnia aktualizacja"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "sensor",
+      "uiQuickAction": false,
+      "icon": "./assets/capability_icons/last_update.svg"
+    },
+    "car_name": {
+      "type": "string",
+      "title": {
+        "de": "Fahrzeug Name",
+        "en": "Car Name",
+        "nl": "Autonaam",
+        "fr": "Nom de la voiture",
+        "it": "Nome dell'auto",
+        "sv": "Bilnamn",
+        "no": "Bilnavn",
+        "es": "Nombre del coche",
+        "da": "Bilnavn",
+        "ru": "Имя автомобиля",
+        "pl": "Nazwa samochodu"
+      },
+      "insights": true,
+      "getable": true,
+      "setable": false,
+      "icon": "./assets/capability_icons/car_name.svg"
+    },
+    "car_sentry_mode": {
+      "type": "boolean",
+      "title": {
+        "de": "Sentry-Modus",
+        "en": "Sentry Mode",
+        "nl": "Sentry-modus",
+        "fr": "Mode Sentinelle",
+        "it": "Modalità sentinella",
+        "sv": "Sentry-läge",
+        "no": "Sentry-modus",
+        "es": "Modo centinela",
+        "da": "Sentry-tilstand",
+        "ru": "Режим сторожевого режима",
+        "pl": "Tryb strażnika"
+      },
+      "titleTrue": {
+        "de": "Sentry-Modus aktiviert",
+        "en": "Sentry Mode enabled",
+        "nl": "Sentry-modus ingeschakeld",
+        "fr": "Mode Sentinelle activé",
+        "it": "Modalità sentinella abilitata",
+        "sv": "Sentry-läge aktiverat",
+        "no": "Sentry-modus aktivert",
+        "es": "Modo centinela activado",
+        "da": "Sentry-tilstand aktiveret",
+        "ru": "Режим сторожевого режима включен",
+        "pl": "Tryb strażnika włączony"
+      },
+      "titleFalse": {
+        "de": "Sentry-Modus deaktiviert",
+        "en": "Sentry Mode disabled",
+        "nl": "Sentry-modus uitgeschakeld",
+        "fr": "Mode Sentinelle désactivé",
+        "it": "Modalità sentinella disabilitata",
+        "sv": "Sentry-läge inaktiverat",
+        "no": "Sentry-modus deaktivert",
+        "es": "Modo centinela desactivado",
+        "da": "Sentry-tilstand deaktiveret",
+        "ru": "Режим сторожевого режима отключен",
+        "pl": "Tryb strażnika wyłączony"
+      },
+      "insightsTitleTrue": {
+        "de": "Sentry-Modus aktiviert",
+        "en": "Sentry Mode enabled",
+        "nl": "Sentry-modus ingeschakeld",
+        "fr": "Mode Sentinelle activé",
+        "it": "Modalità sentinella abilitata",
+        "sv": "Sentry-läge aktiverat",
+        "no": "Sentry-modus aktivert",
+        "es": "Modo centinela activado",
+        "da": "Sentry-tilstand aktiveret",
+        "ru": "Режим сторожевого режима включен",
+        "pl": "Tryb strażnika włączony"
+      },
+      "insightsTitleFalse": {
+        "de": "Sentry-Modus deaktiviert",
+        "en": "Sentry Mode disabled",
+        "nl": "Sentry-modus uitgeschakeld",
+        "fr": "Mode Sentinelle désactivé",
+        "it": "Modalità sentinella disabilitata",
+        "sv": "Sentry-läge inaktiverat",
+        "no": "Sentry-modus deaktivert",
+        "es": "Modo centinela desactivado",
+        "da": "Sentry-tilstand deaktiveret",
+        "ru": "Режим сторожевого режима отключен",
+        "pl": "Tryb strażnika wyłączony"
+      },
+      "insights": true,
+      "getable": true,
+      "setable": true,
+      "uiComponent": "sensor",
+      "icon": "./assets/capability_icons/car_sentry_mode.svg"
+    },
+    "car_service_mode": {
+      "type": "boolean",
+      "title": {
+        "de": "Service-Modus",
+        "en": "Service Mode",
+        "nl": "Service Modus",
+        "fr": "Mode de service",
+        "it": "Modalità di servizio",
+        "sv": "Service-läge",
+        "no": "Service-modus",
+        "es": "Modo de servicio",
+        "da": "Service-tilstand",
+        "ru": "Режим обслуживания",
+        "pl": "Tryb serwisowy"
+      },
+      "titleTrue": {
+        "de": "Service-Modus aktiviert",
+        "en": "Service Mode enabled",
+        "nl": "Service Modus ingeschakeld",
+        "fr": "Mode de service activé",
+        "it": "Modalità di servizio abilitata",
+        "sv": "Service-läge aktiverat",
+        "no": "Service-modus aktivert",
+        "es": "Modo de servicio habilitado",
+        "da": "Service-tilstand aktiveret",
+        "ru": "Режим обслуживания включен",
+        "pl": "Tryb serwisowy włączony"
+      },
+      "titleFalse": {
+        "de": "Service-Modus deaktiviert",
+        "en": "Service Mode disabled",
+        "nl": "Service Modus uitgeschakeld",
+        "fr": "Mode de service désactivé",
+        "it": "Modalità di servizio disabilitata",
+        "sv": "Service-läge inaktiverat",
+        "no": "Service-modus deaktivert",
+        "es": "Modo de servicio deshabilitado",
+        "da": "Service-tilstand deaktiveret",
+        "ru": "Режим обслуживания отключен",
+        "pl": "Tryb serwisowy wyłączony"
+      },
+      "insightsTitleTrue": {
+        "de": "Service-Modus aktiviert",
+        "en": "Service Mode enabled",
+        "nl": "Service Modus ingeschakeld",
+        "fr": "Mode de service activé",
+        "it": "Modalità di servizio abilitata",
+        "sv": "Service-läge aktiverat",
+        "no": "Service-modus aktivert",
+        "es": "Modo de servicio habilitado",
+        "da": "Service-tilstand aktiveret",
+        "ru": "Режим обслуживания включен",
+        "pl": "Tryb serwisowy włączony"
+      },
+      "insightsTitleFalse": {
+        "de": "Service-Modus deaktiviert",
+        "en": "Service Mode disabled",
+        "nl": "Service Modus uitgeschakeld",
+        "fr": "Mode de service désactivé",
+        "it": "Modalità di servizio disabilitata",
+        "sv": "Service-läge inaktiverat",
+        "no": "Service-modus deaktivert",
+        "es": "Modo de servicio deshabilitado",
+        "da": "Service-tilstand deaktiveret",
+        "ru": "Режим обслуживания отключен",
+        "pl": "Tryb serwisowy wyłączony"
+      },
+      "insights": true,
+      "getable": true,
+      "setable": true,
+      "uiComponent": "sensor",
+      "icon": "./assets/capability_icons/car_service_mode.svg"
+    },
+    "car_software_version": {
+      "type": "string",
+      "title": {
+        "de": "Software",
+        "en": "Software",
+        "nl": "Software",
+        "fr": "Software",
+        "it": "Software",
+        "sv": "Software",
+        "no": "Software",
+        "es": "Software",
+        "da": "Software",
+        "ru": "Software",
+        "pl": "Software"
+      },
+      "insights": true,
+      "getable": true,
+      "setable": false,
+      "icon": "./assets/capability_icons/car_software_version.svg"
+    },
+    "car_state": {
+      "type": "enum",
+      "title": {
+        "de": "Status",
+        "en": "Status",
+        "nl": "Status",
+        "fr": "Statut",
+        "it": "Stato",
+        "sv": "Status",
+        "no": "Status",
+        "es": "Estado",
+        "da": "Status",
+        "ru": "Статус",
+        "pl": "Status"
+      },
+      "uiComponent": "sensor",
+      "getable": true,
+      "setable": false,
+      "icon": "./assets/capability_icons/car_state.svg",
+      "values": [
+        {
+          "id": "online",
+          "title": {
+            "de": "Online",
+            "en": "Online",
+            "nl": "Online",
+            "fr": "En ligne",
+            "it": "Online",
+            "sv": "Online",
+            "no": "Online",
+            "es": "En línea",
+            "da": "Online",
+            "ru": "Онлайн",
+            "pl": "Online"
+          }
+        },
+        {
+          "id": "offline",
+          "title": {
+            "de": "Offline",
+            "en": "Offline",
+            "nl": "Offline",
+            "fr": "Hors ligne",
+            "it": "Offline",
+            "sv": "Offline",
+            "no": "Offline",
+            "es": "Desconectado",
+            "da": "Offline",
+            "ru": "Не в сети",
+            "pl": "Offline"
+          }
+        },
+        {
+          "id": "asleep",
+          "title": {
+            "de": "Schlafend",
+            "en": "Asleep",
+            "nl": "Slaapt",
+            "fr": "Endormi",
+            "it": "Addormentato",
+            "sv": "Sover",
+            "no": "Sover",
+            "es": "Dormido",
+            "da": "Sover",
+            "ru": "Спит",
+            "pl": "Śpiący"
+          }
+        }
+      ]
+    },
+    "car_vin": {
+      "type": "string",
+      "title": {
+        "de": "VIN",
+        "en": "VIN",
+        "nl": "VIN",
+        "fr": "VIN",
+        "it": "VIN",
+        "sv": "VIN",
+        "no": "VIN",
+        "es": "VIN",
+        "da": "VIN",
+        "ru": "VIN",
+        "pl": "VIN"
+      },
+      "insights": true,
+      "getable": true,
+      "setable": false,
+      "icon": "./assets/capability_icons/car_vin.svg"
+    },
+    "climate_aircondition_state": {
+      "type": "enum",
+      "title": {
+        "de": "Klimaanlage ein?",
+        "en": "Is air conditioning on?",
+        "nl": "Is de airconditioning aan?",
+        "fr": "La climatisation est-elle activée?",
+        "it": "L'aria condizionata è accesa?",
+        "sv": "Är luftkonditioneringen på?",
+        "no": "Er airconditionen på?",
+        "es": "¿Está encendido el aire acondicionado?",
+        "da": "Er airconditionen tændt?",
+        "ru": "Включен ли кондиционер?",
+        "pl": "Czy klimatyzacja jest włączona?"
+      },
+      "insights": false,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capability_icons/climate_aircondition_state.svg",
+      "values": [
+        {
+          "id": "true",
+          "title": {
+            "de": "Eingeschaltet",
+            "en": "On",
+            "nl": "Aan",
+            "fr": "Activé",
+            "it": "Acceso",
+            "sv": "På",
+            "no": "På",
+            "es": "Encendido",
+            "da": "Tændt",
+            "ru": "Включено",
+            "pl": "Włączone"
+          }
+        },
+        {
+          "id": "false",
+          "title": {
+            "de": "Ausgeschaltet",
+            "en": "Off",
+            "nl": "Uit",
+            "fr": "Désactivé",
+            "it": "Spento",
+            "sv": "Av",
+            "no": "Av",
+            "es": "Apagado",
+            "da": "Slukket",
+            "ru": "Выключено",
+            "pl": "Wyłączone"
+          }
+        }
+      ]
+    },
+    "climate_cabin_overheat_protection": {
+      "type": "enum",
+      "title": {
+        "de": "Überhitzungsschutz",
+        "en": "Cabin Overheat Protection",
+        "nl": "Cabine Oververhittingsbeveiliging",
+        "fr": "Protection contre la surchauffe de la cabine",
+        "it": "Protezione da surriscaldamento dell'abitacolo",
+        "sv": "Kabinöverhettningsskydd",
+        "no": "Kabinoveropphetingsbeskyttelse",
+        "es": "Protección contra el sobrecalentamiento de la cabina",
+        "da": "Kabineoverophedningsbeskyttelse",
+        "ru": "Защита от перегрева салона",
+        "pl": "Ochrona przed przegrzaniem kabiny"
+      },
+      "insights": false,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capability_icons/climate_cabin_overheat_protection.svg",
+      "values": [
+        {
+          "id": "On",
+          "title": {
+            "de": "Eingeschaltet",
+            "en": "On",
+            "nl": "Aan",
+            "fr": "Activé",
+            "it": "Attivo",
+            "sv": "På",
+            "no": "På",
+            "es": "Encendido",
+            "da": "Tændt",
+            "ru": "Включено",
+            "pl": "Włączone"
+          }
+        },
+        {
+          "id": "Off",
+          "title": {
+            "de": "Ausgeschaltet",
+            "en": "Off",
+            "nl": "Uit",
+            "fr": "Désactivé",
+            "it": "Spento",
+            "sv": "Av",
+            "no": "Av",
+            "es": "Apagado",
+            "da": "Slukket",
+            "ru": "Выключено",
+            "pl": "Wyłączone"
+          }
+        }
+      ]
+    },
+    "climate_data_refresh": {
+      "type": "boolean",
+      "title": {
+        "de": "Aktualisieren",
+        "en": "Refresh",
+        "nl": "Vernieuwen",
+        "fr": "Actualiser",
+        "it": "Aggiorna",
+        "sv": "Uppdatera",
+        "no": "Oppdater",
+        "es": "Actualizar",
+        "da": "Opdater",
+        "ru": "Обновить",
+        "pl": "Odśwież"
+      },
+      "insights": false,
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button",
+      "icon": "./assets/capability_icons/refresh.svg"
+    },
+    "climate_defrost_mode": {
+      "type": "enum",
+      "title": {
+        "de": "Fahrzeug enteisen",
+        "en": "Vehicle defrost",
+        "nl": "Voertuig ontdooien",
+        "fr": "Désembuage du véhicule",
+        "it": "Sbrinamento veicolo",
+        "sv": "Bil avfrostning",
+        "no": "Kjøretøy avriming",
+        "es": "Descongelación del vehículo",
+        "da": "Køretøj afisning",
+        "ru": "Размораживание автомобиля",
+        "pl": "Odmrażanie pojazdu"
+      },
+      "insights": false,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capability_icons/climate_defrost_mode.svg",
+      "values": [
+        {
+          "id": "1",
+          "title": {
+            "de": "Eingeschaltet",
+            "en": "On",
+            "nl": "Aan",
+            "fr": "Activé",
+            "it": "Acceso",
+            "sv": "På",
+            "no": "På",
+            "es": "Encendido",
+            "da": "Tændt",
+            "ru": "Включено",
+            "pl": "Włączone"
+          }
+        },
+        {
+          "id": "0",
+          "title": {
+            "de": "Ausgeschaltet",
+            "en": "Off",
+            "nl": "Uit",
+            "fr": "Désactivé",
+            "it": "Spento",
+            "sv": "Av",
+            "no": "Av",
+            "es": "Apagado",
+            "da": "Slukket",
+            "ru": "Выключено",
+            "pl": "Wyłączone"
+          }
+        }
+      ]
+    },
+    "climate_driver_temp_setting": {
+      "type": "number",
+      "title": {
+        "de": "Temp. Fahrer",
+        "en": "Driver Temperature",
+        "nl": "Bestuurderstemperatuur",
+        "fr": "Température du conducteur",
+        "it": "Temperatura guidatore",
+        "sv": "Förartemperatur",
+        "no": "Førertemperatur",
+        "es": "Temperatura del conductor",
+        "da": "Førertemperatur",
+        "ru": "Температура водителя",
+        "pl": "Temperatura kierowcy"
+      },
+      "getable": true,
+      "setable": false,
+      "insights": true,
+      "units": {
+        "de": "Grad",
+        "en": "Degree",
+        "nl": "Graad",
+        "fr": "Degré",
+        "it": "Grado",
+        "sv": "Grad",
+        "no": "Grad",
+        "es": "Grado",
+        "da": "Grad",
+        "ru": "Градус",
+        "pl": "Stopień"
+      },
+      "icon": "./assets/capability_icons/climate_driver_temp_setting.svg"
+    },
+    "climate_last_update": {
+      "type": "string",
+      "title": {
+        "de": "Letzter Abgleich",
+        "en": "Last Update",
+        "nl": "Laatste update",
+        "fr": "Dernière mise à jour",
+        "it": "Ultimo aggiornamento",
+        "sv": "Senaste uppdatering",
+        "no": "Siste oppdatering",
+        "es": "Última actualización",
+        "da": "Seneste opdatering",
+        "ru": "Последнее обновление",
+        "pl": "Ostatnia aktualizacja"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "sensor",
+      "uiQuickAction": false,
+      "icon": "./assets/capability_icons/last_update.svg"
+    },
+    "climate_passenger_temp_setting": {
+      "type": "number",
+      "title": {
+        "de": "Temp. Beifahrer",
+        "en": "Passenger Temperature",
+        "nl": "Passagierstemperatuur",
+        "fr": "Température passager",
+        "it": "Temperatura passeggero",
+        "sv": "Passagerartemperatur",
+        "no": "Passasjertemperatur",
+        "es": "Temperatura del pasajero",
+        "da": "Passagertemperatur",
+        "ru": "Температура пассажира",
+        "pl": "Temperatura pasażera"
+      },
+      "getable": true,
+      "setable": false,
+      "insights": true,
+      "units": {
+        "de": "Grad",
+        "en": "Degree",
+        "nl": "Graad",
+        "fr": "Degré",
+        "it": "Grado",
+        "sv": "Grad",
+        "no": "Grad",
+        "es": "Grado",
+        "da": "Grad",
+        "ru": "Градус",
+        "pl": "Stopień"
+      },
+      "icon": "./assets/capability_icons/climate_passenger_temp_setting.svg"
+    },
+    "climate_preconditioning": {
+      "type": "boolean",
+      "title": {
+        "de": "Vorklimatisierung",
+        "en": "Preconditioning",
+        "nl": "Voorconditionering",
+        "fr": "Préconditionnement",
+        "it": "Precondizionamento",
+        "sv": "Förkonditionering",
+        "no": "Forhåndsbetingelse",
+        "es": "Preacondicionamiento",
+        "da": "Forbetingelse",
+        "ru": "Предварительная обработка",
+        "pl": "Przedkondycjonowanie"
+      },
+      "titleTrue": {
+        "de": "Vorklimatisierung aktiv",
+        "en": "Preconditioning active",
+        "nl": "Voorconditionering actief",
+        "fr": "Préconditionnement actif",
+        "it": "Precondizionamento attivo",
+        "sv": "Förkonditionering aktiv",
+        "no": "Forhåndsbetingelse aktiv",
+        "es": "Preacondicionamiento activo",
+        "da": "Forbetingelse aktiv",
+        "ru": "Активная предварительная обработка",
+        "pl": "Przedkondycjonowanie aktywne"
+      },
+      "titleFalse": {
+        "de": "Vorklimatisierung inaktiv",
+        "en": "Preconditioning inactive",
+        "nl": "Voorconditionering inactief",
+        "fr": "Préconditionnement inactif",
+        "it": "Precondizionamento inattivo",
+        "sv": "Förkonditionering inaktiv",
+        "no": "Forhåndsbetingelse inaktiv",
+        "es": "Preacondicionamiento inactivo",
+        "da": "Forbetingelse inaktiv",
+        "ru": "Неактивная предварительная обработка",
+        "pl": "Przedkondycjonowanie nieaktywne"
+      },
+      "insightsTitleTrue": {
+        "de": "Vorklimatisierung aktiv",
+        "en": "Preconditioning active",
+        "nl": "Voorconditionering actief",
+        "fr": "Préconditionnement actif",
+        "it": "Precondizionamento attivo",
+        "sv": "Förkonditionering aktiv",
+        "no": "Forhåndsbetingelse aktiv",
+        "es": "Preacondicionamiento activo",
+        "da": "Forbetingelse aktiv",
+        "ru": "Активная предварительная обработка",
+        "pl": "Przedkondycjonowanie aktywne"
+      },
+      "insightsTitleFalse": {
+        "de": "Vorklimatisierung inaktiv",
+        "en": "Preconditioning inactive",
+        "nl": "Voorconditionering inactief",
+        "fr": "Préconditionnement inactif",
+        "it": "Precondizionamento inattivo",
+        "sv": "Förkonditionering inaktiv",
+        "no": "Forhåndsbetingelse inaktiv",
+        "es": "Preacondicionamiento inactivo",
+        "da": "Forbetingelse inaktiv",
+        "ru": "Неактивная предварительная обработка",
+        "pl": "Przedkondycjonowanie nieaktywne"
+      },
+      "insights": true,
+      "getable": true,
+      "setable": true,
+      "uiComponent": "sensor",
+      "icon": "/assets/capability_icons/climate_preconditioning.svg"
+    },
+    "climate_preconditioning_times": {
+      "type": "enum",
+      "title": {
+        "de": "Automatische Vorklimatisierung",
+        "en": "Automatic Preconditioning",
+        "nl": "Automatische Voorconditionering",
+        "fr": "Préconditionnement automatique",
+        "it": "Condizionamento automatico",
+        "sv": "Automatisk förkonditionering",
+        "no": "Automatisk forhåndsinnstilling",
+        "es": "Preacondicionamiento automático",
+        "da": "Automatisk forudindstilling",
+        "ru": "Автоматическая предварительная настройка",
+        "pl": "Automatyczne klimatyzowanie"
+      },
+      "uiComponent": "sensor",
+      "getable": true,
+      "setable": false,
+      "icon": "/assets/capability_icons/climate_preconditioning_times.svg",
+      "values": [
+        {
+          "id": "weekdays",
+          "title": {
+            "de": "Mo-Fr",
+            "en": "Mon-Fri",
+            "nl": "Ma-Vr",
+            "fr": "Lun-Ven",
+            "it": "Lun-Ven",
+            "sv": "Mån-Fre",
+            "no": "Man-Fre",
+            "es": "Lun-Vie",
+            "da": "Man-Fre",
+            "ru": "Пн-Пт",
+            "pl": "Pon-Pt"
+          }
+        },
+        {
+          "id": "all_week",
+          "title": {
+            "de": "Ganzwöchig",
+            "en": "All Week",
+            "nl": "Hele week",
+            "fr": "Toute la semaine",
+            "it": "Tutta la settimana",
+            "sv": "Hela veckan",
+            "no": "Hele uken",
+            "es": "Toda la semana",
+            "da": "Hele ugen",
+            "ru": "Вся неделя",
+            "pl": "Cały tydzień"
+          }
+        }
+      ]
+    },
+    "climate_seat_fl_heat_level": {
+      "type": "enum",
+      "title": {
+        "de": "Fahrer",
+        "en": "Driver",
+        "nl": "Bestuurder",
+        "fr": "Chauffeur",
+        "it": "Autista",
+        "sv": "Förare",
+        "no": "Sjåfør",
+        "es": "Conductor",
+        "da": "Fører",
+        "ru": "Водитель",
+        "pl": "Kierowca"
+      },
+      "insights": false,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capability_icons/climate_seat_fl_heat_level.svg",
+      "values": [
+        {
+          "id": "0",
+          "title": {
+            "de": "Aus",
+            "en": "Off",
+            "nl": "Uit",
+            "fr": "Éteint",
+            "it": "Spento",
+            "sv": "Av",
+            "no": "Av",
+            "es": "Apagado",
+            "da": "Fra",
+            "ru": "Выкл",
+            "pl": "Wyłączony"
+          }
+        },
+        {
+          "id": "1",
+          "title": {
+            "en": "1"
+          }
+        },
+        {
+          "id": "2",
+          "title": {
+            "en": "2"
+          }
+        },
+        {
+          "id": "3",
+          "title": {
+            "en": "3"
+          }
+        }
+      ]
+    },
+    "climate_seat_fr_heat_level": {
+      "type": "enum",
+      "title": {
+        "de": "Beifahrer",
+        "en": "Passenger",
+        "nl": "Passagier",
+        "fr": "Passager",
+        "it": "Passeggero",
+        "sv": "Passagerare",
+        "no": "Passasjer",
+        "es": "Pasajero",
+        "da": "Passager",
+        "ru": "Пассажир",
+        "pl": "Pasażer"
+      },
+      "insights": false,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capability_icons/climate_seat_fr_heat_level.svg",
+      "values": [
+        {
+          "id": "0",
+          "title": {
+            "de": "Aus",
+            "en": "Off",
+            "nl": "Uit",
+            "fr": "Éteint",
+            "it": "Spento",
+            "sv": "Av",
+            "no": "Av",
+            "es": "Apagado",
+            "da": "Fra",
+            "ru": "Выкл",
+            "pl": "Wyłączony"
+          }
+        },
+        {
+          "id": "1",
+          "title": {
+            "en": "1"
+          }
+        },
+        {
+          "id": "2",
+          "title": {
+            "en": "2"
+          }
+        },
+        {
+          "id": "3",
+          "title": {
+            "en": "3"
+          }
+        }
+      ]
+    },
+    "climate_seat_rear_center_level": {
+      "type": "enum",
+      "title": {
+        "de": "Hinten, mitte",
+        "en": "Rear Center",
+        "nl": "Achter, midden",
+        "fr": "Arrière, centre",
+        "it": "Posteriore, centrale",
+        "sv": "Bakre mitten",
+        "no": "Bak, midten",
+        "es": "Trasero, centro",
+        "da": "Bageste, midt",
+        "ru": "Задний центр",
+        "pl": "Tył, środek"
+      },
+      "insights": false,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capability_icons/climate_seat_rear_center_level.svg",
+      "values": [
+        {
+          "id": "0",
+          "title": {
+            "de": "Aus",
+            "en": "Off",
+            "nl": "Uit",
+            "fr": "Éteint",
+            "it": "Spento",
+            "sv": "Av",
+            "no": "Av",
+            "es": "Apagado",
+            "da": "Fra",
+            "ru": "Выкл",
+            "pl": "Wyłączony"
+          }
+        },
+        {
+          "id": "1",
+          "title": {
+            "en": "1"
+          }
+        },
+        {
+          "id": "2",
+          "title": {
+            "en": "2"
+          }
+        },
+        {
+          "id": "3",
+          "title": {
+            "en": "3"
+          }
+        }
+      ]
+    },
+    "climate_seat_rear_left_level": {
+      "type": "enum",
+      "title": {
+        "de": "Hinten, links",
+        "en": "Rear Left",
+        "nl": "Achter Links",
+        "fr": "Arrière Gauche",
+        "it": "Posteriore Sinistra",
+        "sv": "Bakre Vänster",
+        "no": "Bak Venstre",
+        "es": "Trasero Izquierdo",
+        "da": "Bagsæde Venstre",
+        "ru": "Задний Левый",
+        "pl": "Tył Lewy"
+      },
+      "insights": false,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capability_icons/climate_seat_rear_left_level.svg",
+      "values": [
+        {
+          "id": "0",
+          "title": {
+            "de": "Aus",
+            "en": "Off",
+            "nl": "Uit",
+            "fr": "Éteint",
+            "it": "Spento",
+            "sv": "Av",
+            "no": "Av",
+            "es": "Apagado",
+            "da": "Fra",
+            "ru": "Выкл",
+            "pl": "Wyłączony"
+          }
+        },
+        {
+          "id": "1",
+          "title": {
+            "en": "1"
+          }
+        },
+        {
+          "id": "2",
+          "title": {
+            "en": "2"
+          }
+        },
+        {
+          "id": "3",
+          "title": {
+            "en": "3"
+          }
+        }
+      ]
+    },
+    "climate_seat_rear_right_level": {
+      "type": "enum",
+      "title": {
+        "de": "Hinten, rechts",
+        "en": "Rear Right",
+        "nl": "Achter Rechts",
+        "fr": "Arrière Droite",
+        "it": "Posteriore Destra",
+        "sv": "Bakre Höger",
+        "no": "Bakre Høyre",
+        "es": "Trasero Derecho",
+        "da": "Bageste Højre",
+        "ru": "Задний Правый",
+        "pl": "Tył Prawy"
+      },
+      "insights": false,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capability_icons/climate_seat_rear_right_level.svg",
+      "values": [
+        {
+          "id": "0",
+          "title": {
+            "de": "Aus",
+            "en": "Off",
+            "nl": "Uit",
+            "fr": "Éteint",
+            "it": "Spento",
+            "sv": "Av",
+            "no": "Av",
+            "es": "Apagado",
+            "da": "Fra",
+            "ru": "Выкл",
+            "pl": "Wyłączony"
+          }
+        },
+        {
+          "id": "1",
+          "title": {
+            "en": "1"
+          }
+        },
+        {
+          "id": "2",
+          "title": {
+            "en": "2"
+          }
+        },
+        {
+          "id": "3",
+          "title": {
+            "en": "3"
+          }
+        }
+      ]
+    },
+    "climate_steering_wheel_level": {
+      "type": "enum",
+      "title": {
+        "de": "Lenkradheizung",
+        "en": "Steering Wheel Heating",
+        "nl": "Stuurwielverwarming",
+        "fr": "Chauffage du volant",
+        "it": "Riscaldamento del volante",
+        "sv": "Rattvärme",
+        "no": "Rattvarme",
+        "es": "Calefacción del volante",
+        "da": "Ratvarme",
+        "ru": "Подогрев руля",
+        "pl": "Podgrzewanie kierownicy"
+      },
+      "insights": false,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capability_icons/climate_steering_wheel_heat_level.svg",
+      "values": [
+        {
+          "id": "0",
+          "title": {
+            "de": "Aus",
+            "en": "Off",
+            "nl": "Uit",
+            "fr": "Éteint",
+            "it": "Spento",
+            "sv": "Av",
+            "no": "Av",
+            "es": "Apagado",
+            "da": "Fra",
+            "ru": "Выкл",
+            "pl": "Wyłączony"
+          }
+        },
+        {
+          "id": "1",
+          "title": {
+            "en": "1"
+          }
+        },
+        {
+          "id": "2",
+          "title": {
+            "en": "2"
+          }
+        },
+        {
+          "id": "3",
+          "title": {
+            "en": "3"
+          }
+        }
+      ]
+    },
+    "location_data_refresh": {
+      "type": "boolean",
+      "title": {
+        "de": "Aktualisieren",
+        "en": "Refresh",
+        "nl": "Vernieuwen",
+        "fr": "Actualiser",
+        "it": "Aggiorna",
+        "sv": "Uppdatera",
+        "no": "Oppdater",
+        "es": "Actualizar",
+        "da": "Opdater",
+        "ru": "Обновить",
+        "pl": "Odśwież"
+      },
+      "insights": false,
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button",
+      "icon": "./assets/capability_icons/refresh.svg"
+    },
+    "location_last_update": {
+      "type": "string",
+      "title": {
+        "de": "Letzter Abgleich",
+        "en": "Last Update",
+        "nl": "Laatste update",
+        "fr": "Dernière mise à jour",
+        "it": "Ultimo aggiornamento",
+        "sv": "Senaste uppdatering",
+        "no": "Siste oppdatering",
+        "es": "Última actualización",
+        "da": "Seneste opdatering",
+        "ru": "Последнее обновление",
+        "pl": "Ostatnia aktualizacja"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "sensor",
+      "uiQuickAction": false,
+      "icon": "./assets/capability_icons/last_update.svg"
+    },
+    "location_name": {
+      "type": "string",
+      "title": {
+        "de": "Standort",
+        "en": "Location",
+        "nl": "Locatie",
+        "fr": "Emplacement",
+        "it": "Posizione",
+        "sv": "Plats",
+        "no": "Sted",
+        "es": "Ubicación",
+        "da": "Placering",
+        "ru": "Местоположение",
+        "pl": "Lokalizacja"
+      },
+      "insights": false,
+      "getable": true,
+      "setable": false,
+      "icon": "./assets/capability_icons/location_name.svg"
+    },
+    "measure_battery_range": {
+      "type": "number",
+      "title": {
+        "de": "Restreichweite",
+        "en": "Remaining Range",
+        "nl": "Resterende Bereik",
+        "fr": "Autonomie restante",
+        "it": "Autonomia residua",
+        "sv": "Återstående räckvidd",
+        "no": "Gjenværende rekkevidde",
+        "es": "Autonomía restante",
+        "da": "Resterende rækkevidde",
+        "ru": "Оставшийся пробег",
+        "pl": "Pozostały zasięg"
+      },
+      "getable": true,
+      "setable": false,
+      "insights": true,
+      "units": {
+        "en": "km"
+      },
+      "icon": "./assets/capability_icons/battery_range.svg"
+    },
+    "measure_battery_soc": {
+      "type": "number",
+      "title": {
+        "en": "SOC"
+      },
+      "getable": true,
+      "setable": false,
+      "insights": true,
+      "units": {
+        "en": "%"
+      },
+      "icon": "./assets/capability_icons/battery_soc.svg"
+    },
+    "measure_car_tpms_pressure_fl": {
+      "type": "number",
+      "title": {
+        "de": "TPMS vorn links",
+        "en": "TPMS front left",
+        "nl": "TPMS voor links",
+        "fr": "TPMS avant gauche",
+        "it": "TPMS anteriore sinistro",
+        "sv": "TPMS fram vänster",
+        "no": "TPMS foran venstre",
+        "es": "TPMS delantero izquierdo",
+        "da": "TPMS foran venstre",
+        "ru": "TPMS передний левый",
+        "pl": "TPMS przedni lewy"
+      },
+      "units": "Bar",
+      "decimals": 2,
+      "insights": true,
+      "getable": true,
+      "setable": false,
+      "icon": "./assets/capability_icons/measure_car_tpms_pressure.svg"
+    },
+    "measure_car_tpms_pressure_fr": {
+      "type": "number",
+      "title": {
+        "de": "TPMS vorn rechts",
+        "en": "",
+        "nl": "",
+        "fr": "",
+        "it": "",
+        "sv": "",
+        "no": "",
+        "es": "",
+        "da": "",
+        "ru": "",
+        "pl": ""
+      },
+      "units": "Bar",
+      "decimals": 2,
+      "insights": true,
+      "getable": true,
+      "setable": false,
+      "icon": "./assets/capability_icons/measure_car_tpms_pressure.svg"
+    },
+    "measure_car_tpms_pressure_rl": {
+      "type": "number",
+      "title": {
+        "de": "TPMS hinten links",
+        "en": "TPMS rear left",
+        "nl": "TPMS achter links",
+        "fr": "TPMS arrière gauche",
+        "it": "TPMS posteriore sinistro",
+        "sv": "TPMS bakre vänster",
+        "no": "TPMS bakre venstre",
+        "es": "TPMS trasero izquierdo",
+        "da": "TPMS bag venstre",
+        "ru": "TPMS задний левый",
+        "pl": "TPMS tył lewy"
+      },
+      "units": "Bar",
+      "decimals": 2,
+      "insights": true,
+      "getable": true,
+      "setable": false,
+      "icon": "./assets/capability_icons/measure_car_tpms_pressure.svg"
+    },
+    "measure_car_tpms_pressure_rr": {
+      "type": "number",
+      "title": {
+        "de": "TPMS hinten rechts",
+        "en": "TPMS rear right",
+        "nl": "TPMS achter rechts",
+        "fr": "TPMS arrière droit",
+        "it": "TPMS posteriore destro",
+        "sv": "TPMS bakre höger",
+        "no": "TPMS bakre høyre",
+        "es": "TPMS trasero derecho",
+        "da": "TPMS baghøjre",
+        "ru": "TPMS задний правый",
+        "pl": "TPMS tył prawy"
+      },
+      "units": "Bar",
+      "decimals": 2,
+      "insights": true,
+      "getable": true,
+      "setable": false,
+      "icon": "./assets/capability_icons/measure_car_tpms_pressure.svg"
+    },
+    "measure_climate_temperature_in": {
+      "type": "number",
+      "title": {
+        "de": "Innentemperatur",
+        "en": "Indoor Temperature",
+        "nl": "Binnentemperatuur",
+        "fr": "Température intérieure",
+        "it": "Temperatura interna",
+        "sv": "Inomhustemperatur",
+        "no": "Innetemperatur",
+        "es": "Temperatura interior",
+        "da": "Indendørstemperatur",
+        "ru": "Температура внутри помещения",
+        "pl": "Temperatura wewnętrzna"
+      },
+      "units": "°C",
+      "decimals": 2,
+      "insights": true,
+      "getable": true,
+      "setable": false,
+      "icon": "./assets/capability_icons/measure_climate_temperature_in.svg"
+    },
+    "measure_climate_temperature_out": {
+      "type": "number",
+      "title": {
+        "de": "Außentemperatur",
+        "en": "Outside Temperature",
+        "nl": "Buitentemperatuur",
+        "fr": "Température extérieure",
+        "it": "Temperatura esterna",
+        "sv": "Utomhustemperatur",
+        "no": "Utvendig temperatur",
+        "es": "Temperatura exterior",
+        "da": "Udendørstemperatur",
+        "ru": "Температура на улице",
+        "pl": "Temperatura zewnętrzna"
+      },
+      "units": "°C",
+      "decimals": 2,
+      "insights": true,
+      "getable": true,
+      "setable": false,
+      "icon": "./assets/capability_icons/measure_climate_temperature_out.svg"
+    },
+    "measure_location_latitude": {
+      "type": "number",
+      "title": {
+        "de": "Breitengrad",
+        "en": "Latitude",
+        "nl": "Breedtegraad",
+        "fr": "Latitude",
+        "it": "Latitudine",
+        "sv": "Latitud",
+        "no": "Breddegrad",
+        "es": "Latitud",
+        "da": "Breddegrad",
+        "ru": "Широта",
+        "pl": "Szerokość geograficzna"
+      },
+      "decimals": 8,
+      "insights": false,
+      "getable": true,
+      "setable": false,
+      "icon": "./assets/capability_icons/measure_location_latitude.svg"
+    },
+    "measure_location_longitude": {
+      "type": "number",
+      "title": {
+        "de": "Längengrad",
+        "en": "Longitude",
+        "nl": "Lengtegraad",
+        "fr": "Longitude",
+        "it": "Longitudine",
+        "sv": "Longitud",
+        "no": "Lengdegrad",
+        "es": "Longitud",
+        "da": "Længdegrad",
+        "ru": "Долгота",
+        "pl": "Długość geograficzna"
+      },
+      "decimals": 8,
+      "insights": false,
+      "getable": true,
+      "setable": false,
+      "icon": "./assets/capability_icons/measure_location_longitude.svg"
+    },
+    "media_data_refresh": {
+      "type": "boolean",
+      "title": {
+        "de": "Aktualisieren",
+        "en": "Refresh",
+        "nl": "Vernieuwen",
+        "fr": "Actualiser",
+        "it": "Aggiorna",
+        "sv": "Uppdatera",
+        "no": "Oppdater",
+        "es": "Actualizar",
+        "da": "Opdater",
+        "ru": "Обновить",
+        "pl": "Odśwież"
+      },
+      "insights": false,
+      "getable": false,
+      "setable": true,
+      "uiComponent": "button",
+      "icon": "./assets/capability_icons/refresh.svg"
+    },
+    "media_last_update": {
+      "type": "string",
+      "title": {
+        "de": "Letzter Abgleich",
+        "en": "Last Update",
+        "nl": "Laatste update",
+        "fr": "Dernière mise à jour",
+        "it": "Ultimo aggiornamento",
+        "sv": "Senaste uppdatering",
+        "no": "Siste oppdatering",
+        "es": "Última actualización",
+        "da": "Seneste opdatering",
+        "ru": "Последнее обновление",
+        "pl": "Ostatnia aktualizacja"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "sensor",
+      "uiQuickAction": false,
+      "icon": "./assets/capability_icons/last_update.svg"
+    },
+    "meter_car_odo": {
+      "type": "number",
+      "title": {
+        "de": "Kilometerzähler",
+        "en": "Odometer",
+        "nl": "Kilometerteller",
+        "fr": "Compteur kilométrique",
+        "it": "Contachilometri",
+        "sv": "Mätarställning",
+        "no": "Kilometerteller",
+        "es": "Odómetro",
+        "da": "Kilometertæller",
+        "ru": "Счетчик пробега",
+        "pl": "Licznik kilometrów"
+      },
+      "units": "km",
+      "decimals": 2,
+      "insights": true,
+      "getable": true,
+      "setable": false,
+      "icon": "./assets/capability_icons/meter_car_odo.svg"
+    }
+  }
 }

@@ -1,0 +1,19 @@
+{
+    "type": "string",
+    "title": {
+      "de": "Letzter Geplanter Ladestart",
+      "en": "Last Scheduled Charging Start",
+      "nl": "Laatste Geplande Laadstart",
+      "fr": "Dernier Départ de Charge Programmé",
+      "it": "Ultimo Avvio di Ricarica Programmato",
+      "sv": "Senaste Planerade Laddningsstart",
+      "no": "Siste Planlagte Lading Start",
+      "es": "Último Inicio de Carga Programado",
+      "da": "Seneste Planlagte Opladningsstart",
+      "ru": "Последнее запланированное начало зарядки",
+      "pl": "Ostatni Zaplanowany Start Ładowania"
+    },
+    "getable": true,
+    "setable": false,
+    "icon": "./assets/capability_icons/battery_scheduled_charging_start.svg"
+}

@@ -1,0 +1,23 @@
+{
+    "type": "number",
+    "title": {
+      "de": "Restreichweite",
+      "en": "Remaining Range",
+      "nl": "Resterende Bereik",
+      "fr": "Autonomie restante",
+      "it": "Autonomia residua",
+      "sv": "Återstående räckvidd",
+      "no": "Gjenværende rekkevidde",
+      "es": "Autonomía restante",
+      "da": "Resterende rækkevidde",
+      "ru": "Оставшийся пробег",
+      "pl": "Pozostały zasięg"
+    },
+    "getable": true,
+    "setable": false,
+    "insights": true,
+    "units": { 
+      "en": "km"
+     },
+     "icon": "./assets/capability_icons/battery_range.svg"
+  }

@@ -1,0 +1,8 @@
+{
+    "id": "car_data_name",
+    "type": "label",
+    "label": {
+      "en": "Name"
+    },
+    "value": ""
+  }

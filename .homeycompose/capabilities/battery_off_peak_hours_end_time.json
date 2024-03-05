@@ -1,0 +1,19 @@
+{
+    "type": "string",
+    "title": {
+      "de": "Nebentarif endet um",
+      "en": "Off-peak hours end at",
+      "nl": "Daluren eindigen om",
+      "fr": "Les heures creuses se terminent à",
+      "it": "Le ore fuori picco terminano alle",
+      "sv": "Lågpristimmarna slutar kl",
+      "no": "Lavpristimene slutter kl",
+      "es": "Las horas fuera de pico terminan a las",
+      "da": "Lavpristimerne slutter kl",
+      "ru": "Низкий тариф заканчивается в",
+      "pl": "Godziny poza szczytem kończą się o"
+    },
+    "getable": true,
+    "setable": false,
+    "icon": "./assets/capability_icons/battery_off_peak_hours_end_time.svg"
+}

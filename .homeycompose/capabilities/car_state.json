@@ -1,0 +1,70 @@
+{
+    "type": "enum",
+    "title": {
+        "de": "Status",
+        "en": "Status",
+        "nl": "Status",
+        "fr": "Statut",
+        "it": "Stato",
+        "sv": "Status",
+        "no": "Status",
+        "es": "Estado",
+        "da": "Status",
+        "ru": "Статус",
+        "pl": "Status"
+    },
+    "uiComponent": "sensor",
+    "getable": true,
+    "setable": false,
+    "icon": "./assets/capability_icons/car_state.svg",
+    "values": [
+        {
+            "id": "online",
+            "title": {
+                "de": "Online",
+                "en": "Online",
+                "nl": "Online",
+                "fr": "En ligne",
+                "it": "Online",
+                "sv": "Online",
+                "no": "Online",
+                "es": "En línea",
+                "da": "Online",
+                "ru": "Онлайн",
+                "pl": "Online"
+            }
+        },
+        {
+            "id": "offline",
+            "title": {
+                "de": "Offline",
+                "en": "Offline",
+                "nl": "Offline",
+                "fr": "Hors ligne",
+                "it": "Offline",
+                "sv": "Offline",
+                "no": "Offline",
+                "es": "Desconectado",
+                "da": "Offline",
+                "ru": "Не в сети",
+                "pl": "Offline"
+            }
+        },
+        {
+            "id": "asleep",
+            "title": {
+                "de": "Schlafend",
+                "en": "Asleep",
+                "nl": "Slaapt",
+                "fr": "Endormi",
+                "it": "Addormentato",
+                "sv": "Sover",
+                "no": "Sover",
+                "es": "Dormido",
+                "da": "Sover",
+                "ru": "Спит",
+                "pl": "Śpiący"
+            }
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="100%"
+   height="100%"
+   viewBox="0 0 2084 2084"
+   version="1.1"
+   xml:space="preserve"
+   style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
+   id="svg5"
+   sodipodi:docname="icon.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs5" /><sodipodi:namedview
+   id="namedview5"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   inkscape:zoom="0.56669866"
+   inkscape:cx="1042.8823"
+   inkscape:cy="1042.8823"
+   inkscape:window-width="1592"
+   inkscape:window-height="1368"
+   inkscape:window-x="0"
+   inkscape:window-y="0"
+   inkscape:window-maximized="0"
+   inkscape:current-layer="svg5" />
+    
+    
+    <g
+   transform="matrix(1.4692221,0,0,3.4514844,-751.69806,-2390.223)"
+   id="g3">
+        <path
+   d="m 1912.28,1036.14 c -5.18,-32.67 2.1,-67.996 15,-74.066 5.89,-6.506 0.01,-20.992 -6.56,-23.074 23.34,9.386 -112.96,-31.44 -183.05,-58.61 -231.7,-89.821 -418.85,-117.81 -589.11,-114.858 -171.719,-1.157 -304.303,41.861 -373.496,77.163 -30.162,15.388 -101.735,51.826 -159.61,87.738 -45.702,28.357 -100.766,41.484 -101.635,37.641 l 133.778,-3.085 c 30.917,-14.426 32.349,-22.553 69.374,-45.102 119.893,-73.018 192.726,-85.154 289.689,-105 209.81,-19.841 371.06,-4.179 550.31,45 131.62,41.648 228.4,74.361 295.31,104.062 15.79,13.656 49.1,44.711 60,72.191 z"
+   id="path3" />
+    </g>
+    
+    <g
+   id="battery-charging-high.svg"
+   transform="matrix(42.828498,0,0,40.946251,1022.4422,1077.7332)">
+        <g
+   transform="translate(-12,-12)"
+   id="g5">
+            <path
+   d="M 12,20 H 4 V 6 h 8 M 12.67,4 H 11 V 2 H 5 V 4 H 3.33 C 2.6,4 2,4.6 2,5.33 V 20.67 C 2,21.4 2.6,22 3.33,22 h 9.34 C 13.41,22 14,21.41 14,20.67 V 5.33 C 14,4.6 13.4,4 12.67,4 M 11,16 H 5 v 3 h 6 V 16 M 11,7 H 5 v 3 h 6 V 7 m 0,4.5 H 5 v 3 h 6 v -3 M 23,10 H 20 V 3 l -5,10 h 3 v 8"
+   style="fill-rule:nonzero"
+   id="path5" />
+        </g>
+    </g>
+</svg>

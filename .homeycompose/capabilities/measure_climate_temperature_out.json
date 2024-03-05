@@ -1,0 +1,22 @@
+{
+    "type": "number",
+    "title": {
+      "de": "Außentemperatur",
+      "en": "Outside Temperature",
+      "nl": "Buitentemperatuur",
+      "fr": "Température extérieure",
+      "it": "Temperatura esterna",
+      "sv": "Utomhustemperatur",
+      "no": "Utvendig temperatur",
+      "es": "Temperatura exterior",
+      "da": "Udendørstemperatur",
+      "ru": "Температура на улице",
+      "pl": "Temperatura zewnętrzna"
+    },
+    "units": "°C",
+    "decimals": 2,
+    "insights": true,
+    "getable": true,
+    "setable": false,
+    "icon": "./assets/capability_icons/measure_climate_temperature_out.svg"
+  }

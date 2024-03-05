@@ -1,0 +1,43 @@
+{
+  "id": "location",
+  "name": {
+     "de": "04-Standort-Informationen",
+     "en": "04-Standort-Informationen"
+
+      },
+  "class": "sensor",
+  "capabilities": [
+    "location_data_refresh",
+    "measure_location_latitude",
+    "measure_location_longitude",
+    "location_name",
+    "alarm_api_error",
+    "location_last_update"    
+   ],
+    "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+   },
+   "energy": {
+    "batteries": [
+        "OTHER"
+    ]
+    },
+    "pair": [
+        {
+            "id": "list_devices",
+            "template": "list_devices",
+            "navigation": {
+                "next": "add_devices"
+            }
+        },
+        {
+            "id": "add_devices",
+            "template": "add_devices",
+            "navigation": {
+                "prev": "list_devices"
+            }
+        }
+    ]
+}

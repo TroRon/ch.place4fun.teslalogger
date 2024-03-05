@@ -1,0 +1,54 @@
+{
+    "type": "enum",
+    "title": {
+        "de": "Automatische Vorklimatisierung",
+        "en": "Automatic Preconditioning",
+        "nl": "Automatische Voorconditionering",
+        "fr": "Préconditionnement automatique",
+        "it": "Condizionamento automatico",
+        "sv": "Automatisk förkonditionering",
+        "no": "Automatisk forhåndsinnstilling",
+        "es": "Preacondicionamiento automático",
+        "da": "Automatisk forudindstilling",
+        "ru": "Автоматическая предварительная настройка",
+        "pl": "Automatyczne klimatyzowanie"
+    },
+    "uiComponent": "sensor",
+    "getable": true,
+    "setable": false,
+    "icon": "/assets/capability_icons/climate_preconditioning_times.svg",
+    "values": [
+        {
+            "id": "weekdays",
+            "title": {
+                "de": "Mo-Fr",
+                "en": "Mon-Fri",
+                "nl": "Ma-Vr",
+                "fr": "Lun-Ven",
+                "it": "Lun-Ven",
+                "sv": "Mån-Fre",
+                "no": "Man-Fre",
+                "es": "Lun-Vie",
+                "da": "Man-Fre",
+                "ru": "Пн-Пт",
+                "pl": "Pon-Pt"
+            }
+        },
+        {
+            "id": "all_week",
+            "title": {
+                "de": "Ganzwöchig",
+                "en": "All Week",
+                "nl": "Hele week",
+                "fr": "Toute la semaine",
+                "it": "Tutta la settimana",
+                "sv": "Hela veckan",
+                "no": "Hele uken",
+                "es": "Toda la semana",
+                "da": "Hele ugen",
+                "ru": "Вся неделя",
+                "pl": "Cały tydzień"
+            }
+        }
+    ]
+}

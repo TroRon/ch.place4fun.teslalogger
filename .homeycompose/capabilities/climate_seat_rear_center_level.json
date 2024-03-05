@@ -1,0 +1,57 @@
+{
+  "type": "enum",
+  "title": {
+    "de": "Hinten, mitte",
+    "en": "Rear Center",
+    "nl": "Achter, midden",
+    "fr": "Arrière, centre",
+    "it": "Posteriore, centrale",
+    "sv": "Bakre mitten",
+    "no": "Bak, midten",
+    "es": "Trasero, centro",
+    "da": "Bageste, midt",
+    "ru": "Задний центр",
+    "pl": "Tył, środek"
+  },
+  "insights": false,
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/capability_icons/climate_seat_rear_center_level.svg",
+  "values": [
+    {
+      "id": "0",
+      "title": {
+        "de": "Aus",
+        "en": "Off",
+        "nl": "Uit",
+        "fr": "Éteint",
+        "it": "Spento",
+        "sv": "Av",
+        "no": "Av",
+        "es": "Apagado",
+        "da": "Fra",
+        "ru": "Выкл",
+        "pl": "Wyłączony"
+      }
+    },
+    {
+      "id": "1",
+      "title": {
+        "en": "1"
+      }
+    },
+    {
+      "id": "2",
+      "title": {
+        "en": "2"
+      }
+    },
+    {
+      "id": "3",
+      "title": {
+        "en": "3"
+      }
+    }
+  ]
+}

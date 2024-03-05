@@ -1,0 +1,20 @@
+[
+  {
+      "type": "group",
+      "label": {
+        "en": "Assigned to car",
+        "de": "Mit Fahrzeug verknüpft",
+        "nl": "Toegekend aan auto"
+      },
+      "children": [
+        {
+          "$extends": "car_data_name",
+          "id": "car_data_name"
+        },
+        {
+          "$extends": "car_data_vin",
+          "id": "car_data_vin"
+        }
+    ]
+    }  
+  ]

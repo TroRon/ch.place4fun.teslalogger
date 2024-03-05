@@ -1,0 +1,22 @@
+{
+    "type": "number",
+    "title": {
+      "de": "TPMS vorn rechts",
+      "en": "",
+      "nl": "",
+      "fr": "",
+      "it": "",
+      "sv": "",
+      "no": "",
+      "es": "",
+      "da": "",
+      "ru": "",
+      "pl": ""
+    },
+    "units": "Bar",
+    "decimals": 2,
+    "insights": true,
+    "getable": true,
+    "setable": false,
+    "icon": "./assets/capability_icons/measure_car_tpms_pressure.svg"
+  }

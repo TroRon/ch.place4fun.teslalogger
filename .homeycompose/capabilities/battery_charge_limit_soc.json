@@ -1,0 +1,23 @@
+{
+    "type": "number",
+    "title": {
+      "de": "Ladelimit",
+      "en": "Charge limit",
+      "nl": "Laadlimiet",
+      "fr": "Limite de charge",
+      "it": "Limite di carica",
+      "sv": "Laddningsgräns",
+      "no": "Ladegrense",
+      "es": "Límite de carga",
+      "da": "Opladningsgrænse",
+      "ru": "Предел заряда",
+      "pl": "Limit ładowania"
+
+    },
+    "getable": true,
+    "setable": false,
+    "units": { 
+      "en": "%"
+     },
+     "icon": "./assets/capability_icons/battery_charge_limit_soc.svg"
+  }

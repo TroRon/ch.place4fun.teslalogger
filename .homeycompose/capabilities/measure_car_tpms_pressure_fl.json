@@ -1,0 +1,22 @@
+{
+    "type": "number",
+    "title": {
+      "de": "TPMS vorn links",
+      "en": "TPMS front left",
+      "nl": "TPMS voor links",
+      "fr": "TPMS avant gauche",
+      "it": "TPMS anteriore sinistro",
+      "sv": "TPMS fram vänster",
+      "no": "TPMS foran venstre",
+      "es": "TPMS delantero izquierdo",
+      "da": "TPMS foran venstre",
+      "ru": "TPMS передний левый",
+      "pl": "TPMS przedni lewy"
+    },
+    "units": "Bar",
+    "decimals": 2,
+    "insights": true,
+    "getable": true,
+    "setable": false,
+    "icon": "./assets/capability_icons/measure_car_tpms_pressure.svg"
+  }

@@ -1,0 +1,34 @@
+{
+    "type": "number",
+    "title": {
+      "de": "Temp. Fahrer",
+      "en": "Driver Temperature",
+      "nl": "Bestuurderstemperatuur",
+      "fr": "Température du conducteur",
+      "it": "Temperatura guidatore",
+      "sv": "Förartemperatur",
+      "no": "Førertemperatur",
+      "es": "Temperatura del conductor",
+      "da": "Førertemperatur",
+      "ru": "Температура водителя",
+      "pl": "Temperatura kierowcy"
+    },
+    "getable": true,
+    "setable": false,
+    "insights": true,
+    "units": { 
+      "de": "Grad",
+      "en": "Degree",
+      "nl": "Graad",
+      "fr": "Degré",
+      "it": "Grado",
+      "sv": "Grad",
+      "no": "Grad",
+      "es": "Grado",
+      "da": "Grad",
+      "ru": "Градус",
+      "pl": "Stopień"
+     },
+
+     "icon": "./assets/capability_icons/climate_driver_temp_setting.svg"
+  }

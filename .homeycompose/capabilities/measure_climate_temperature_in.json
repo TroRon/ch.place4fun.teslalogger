@@ -1,0 +1,22 @@
+{
+    "type": "number",
+    "title": {
+      "de": "Innentemperatur",
+      "en": "Indoor Temperature",
+      "nl": "Binnentemperatuur",
+      "fr": "Température intérieure",
+      "it": "Temperatura interna",
+      "sv": "Inomhustemperatur",
+      "no": "Innetemperatur",
+      "es": "Temperatura interior",
+      "da": "Indendørstemperatur",
+      "ru": "Температура внутри помещения",
+      "pl": "Temperatura wewnętrzna"
+    },
+    "units": "°C",
+    "decimals": 2,
+    "insights": true,
+    "getable": true,
+    "setable": false,
+    "icon": "./assets/capability_icons/measure_climate_temperature_in.svg"
+  }
