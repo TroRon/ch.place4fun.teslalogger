@@ -57,10 +57,10 @@
     }
   },
   "bugs": {
-    "url": "https://github.com/TroRon/ch.place4fun.pihole/issues"
+    "url": "https://github.com/TroRon/ch.place4fun.teslalogger/issues"
   },
   "support": "mailto:webmaster@syen.ch",
-  "homepage": "https://github.com/TroRon/ch.place4fun.pihole/wiki",
-  "source": "https://github.com/TroRon/ch.place4fun.pihole",
-  "homeyCommunityTopicId": 104113
+  "homepage": "https://github.com/TroRon/ch.place4fun.teslalogger/wiki",
+  "source": "https://github.com/TroRon/ch.place4fun.teslalogger",
+  "homeyCommunityTopicId": 105617
 }
