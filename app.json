@@ -12,7 +12,16 @@
     "en": "TeslaLogger"
   },
   "description": {
-    "en": "Connect TeslaLogger to Homey"
+    "en": "New possibilities with the TeslaLogger integration",
+    "de": "Neue Möglichkeiten mit der TeslaLogger Anbindung",
+    "da": "Nye muligheder med TeslaLogger integration",
+    "es": "Nuevas posibilidades con la integración de TeslaLogger",
+    "fr": "Nouvelles possibilités avec l'intégration de TeslaLogger",
+    "nl": "Nieuwe mogelijkheden met de TeslaLogger integratie",
+    "no": "Nye muligheter med TeslaLogger-integrasjon",
+    "pl": "Nowe możliwości z integracją TeslaLogger",
+    "ru": "Новые возможности с интеграцией TeslaLogger",
+    "sv": "Nya möjligheter med TeslaLogger-integration"
   },
   "category": [
     "tools"
@@ -27,6 +36,34 @@
     "name": "Ronny Troxler",
     "email": "ronny.troxler@bluewin.ch"
   },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Ronny Troxler",
+        "email": "ronny.troxler@bluewin.ch",
+        "website": "https://place4fun.ch"
+      }
+    ],
+    "translators": [
+      {
+        "name": "GitHub CoPilot ;)"
+      }
+    ]
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "troron"
+      }
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/TroRon/ch.place4fun.teslalogger/issues"
+  },
+  "support": "mailto:webmaster@syen.ch",
+  "homepage": "https://github.com/TroRon/ch.place4fun.teslalogger/wiki",
+  "source": "https://github.com/TroRon/ch.place4fun.teslalogger",
+  "homeyCommunityTopicId": 105617,
   "drivers": [
     {
       "id": "battery",
