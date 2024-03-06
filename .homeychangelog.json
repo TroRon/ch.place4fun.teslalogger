@@ -1,6 +1,15 @@
 {
   "0.0.1": {
     "en": "1st Alpha Version",
-    "de": "1. Alpha Version"
+    "de": "1. Alpha Version",
+    "nl": "1e Alfa Versie",
+    "fr": "1ère Version Alpha",
+    "it": "1a Versione Alpha",
+    "sv": "Första Alfa-versionen",
+    "no": "1. Alfa-versjon",
+    "es": "1ª Versión Alfa",
+    "da": "1. Alpha-version",
+    "ru": "1-я Альфа-версия",
+    "pl": "Pierwsza wersja Alfa"
   }
 }
