@@ -1,10 +1,12 @@
-Do you have a TeslaLogger installation that logs your car's data?
+Har du en TeslaLogger installasjon som logger dataene fra bilen din?
 
-Do you want to easily view the data, preferably through Homey?
+Ønsker du å enkelt kunne se dataene, helst via Homey?
 
-Then I have something for you:
-Extend Homey with the ability to display and react to data from your TeslaLogger.
+Da har jeg noe for deg:
+Utvid Homey med muligheten til å vise og reagere på dataene fra TeslaLoggeren din.
 
-The possibilities are endless when you expand Homey with this feature.
+Mulighetene er uendelige når du utvider Homey med denne funksjonen.
 
-Enjoy this app!
+Begynn med å legge til driveren "TeslaLogger" først. Den er grunnlaget for alle andre drivere.
+
+Ha det gøy med denne appen!

@@ -1,9 +1,17 @@
 {
   "id": "location",
   "name": {
-     "de": "04-Standort-Informationen",
-     "en": "04-Standort-Informationen"
-
+    "de": "Standort-Informationen",
+    "en": "Location Information",
+    "nl": "Locatie-informatie",
+    "fr": "Informations de localisation",
+    "it": "Informazioni sulla posizione",
+    "sv": "Platsinformation",
+    "no": "Stedsinformasjon",
+    "es": "Información de ubicación",
+    "da": "Placering information",
+    "ru": "Информация о местоположении",
+    "pl": "Informacje o lokalizacji"
       },
   "class": "sensor",
   "capabilities": [

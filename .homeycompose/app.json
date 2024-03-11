@@ -1,6 +1,6 @@
 {
   "id": "ch.place4fun.teslalogger",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#000000",
@@ -21,7 +21,7 @@
     "pl": "Nowe możliwości z integracją TeslaLogger",
     "ru": "Новые возможности с интеграцией TeslaLogger",
     "sv": "Nya möjligheter med TeslaLogger-integration"
-    },
+  },
   "category": [
     "tools"
   ],

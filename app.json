@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "ch.place4fun.teslalogger",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#000000",
@@ -64,12 +64,109 @@
   "homepage": "https://github.com/TroRon/ch.place4fun.teslalogger/wiki",
   "source": "https://github.com/TroRon/ch.place4fun.teslalogger",
   "homeyCommunityTopicId": 105617,
+  "flow": {
+    "triggers": [
+      {
+        "title": {
+          "en": "Connection restored",
+          "de": "Verbindung wiederhergestellt",
+          "nl": "Verbinding hersteld",
+          "fr": "Connexion restaurée",
+          "it": "Connessione ripristinata",
+          "sv": "Anslutning återställd",
+          "no": "Tilkoblingen gjenopprettet",
+          "es": "Conexión restablecida",
+          "da": "Forbindelse genoprettet",
+          "ru": "Соединение восстановлено",
+          "pl": "Połączenie przywrócone"
+        },
+        "tokens": [
+          {
+            "name": "alarm_api_error",
+            "type": "boolean",
+            "title": {
+              "en": "Connection status",
+              "de": "Verbindungsstatus",
+              "nl": "Verbindingsstatus",
+              "fr": "Statut de la connexion",
+              "it": "Stato della connessione",
+              "sv": "Anslutningsstatus",
+              "no": "Tilkoblingsstatus",
+              "es": "Estado de conexión",
+              "da": "Forbindelsesstatus",
+              "ru": "Статус подключения",
+              "pl": "Status połączenia"
+            }
+          }
+        ],
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=car"
+          }
+        ],
+        "id": "alarm_api_error_false"
+      },
+      {
+        "title": {
+          "en": "Connection interrupted",
+          "de": "Verbindung unterbrochen",
+          "nl": "Verbinding onderbroken",
+          "fr": "Connexion interrompue",
+          "it": "Connessione interrotta",
+          "sv": "Anslutning avbruten",
+          "no": "Forbindelsen er brutt",
+          "es": "Conexión interrumpida",
+          "da": "Forbindelsen er afbrudt",
+          "ru": "Соединение прервано",
+          "pl": "Połączenie przerwane"
+        },
+        "tokens": [
+          {
+            "name": "alarm_api_error",
+            "type": "boolean",
+            "title": {
+              "en": "Connection status",
+              "de": "Verbindungsstatus",
+              "nl": "Verbindingsstatus",
+              "fr": "Statut de la connexion",
+              "it": "Stato della connessione",
+              "sv": "Anslutningsstatus",
+              "no": "Tilkoblingsstatus",
+              "es": "Estado de conexión",
+              "da": "Forbindelsesstatus",
+              "ru": "Статус подключения",
+              "pl": "Status połączenia"
+            }
+          }
+        ],
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=car"
+          }
+        ],
+        "id": "alarm_api_error_true"
+      }
+    ]
+  },
   "drivers": [
     {
       "id": "battery",
       "name": {
-        "de": "02-Batterie-Informationen hinzufügen",
-        "en": "02-Batterie-Informationen hinzufügen"
+        "de": "Batterie-Informationen",
+        "en": "Battery Information",
+        "nl": "Batterij-informatie",
+        "fr": "Informations sur la batterie",
+        "it": "Informazioni sulla batteria",
+        "sv": "Batteriinformation",
+        "no": "Batteriinformasjon",
+        "es": "Información de la batería",
+        "da": "Batterioplysninger",
+        "ru": "Информация о батарее",
+        "pl": "Informacje o baterii"
       },
       "class": "sensor",
       "capabilities": [
@@ -143,8 +240,17 @@
     {
       "id": "car",
       "name": {
-        "de": "01-TeslaLogger verbinden",
-        "en": "01-TeslaLogger verbinden"
+        "de": "TeslaLogger",
+        "en": "TeslaLogger",
+        "nl": "TeslaLogger",
+        "fr": "TeslaLogger",
+        "it": "TeslaLogger",
+        "sv": "TeslaLogger",
+        "no": "TeslaLogger",
+        "es": "TeslaLogger",
+        "da": "TeslaLogger",
+        "ru": "TeslaLogger",
+        "pl": "TeslaLogger"
       },
       "class": "sensor",
       "capabilities": [
@@ -305,8 +411,17 @@
     {
       "id": "climate",
       "name": {
-        "de": "03-Klima-Informationen",
-        "en": "03-Klima-Informationen"
+        "de": "Klima-Informationen",
+        "en": "Climate Information",
+        "nl": "Klimaat Informatie",
+        "fr": "Informations sur le climat",
+        "it": "Informazioni sul clima",
+        "sv": "Klimatinformation",
+        "no": "Klimainformasjon",
+        "es": "Información del clima",
+        "da": "Klimaoplysninger",
+        "ru": "Информация о климате",
+        "pl": "Informacje o klimacie"
       },
       "class": "sensor",
       "capabilities": [
@@ -386,8 +501,17 @@
     {
       "id": "location",
       "name": {
-        "de": "04-Standort-Informationen",
-        "en": "04-Standort-Informationen"
+        "de": "Standort-Informationen",
+        "en": "Location Information",
+        "nl": "Locatie-informatie",
+        "fr": "Informations de localisation",
+        "it": "Informazioni sulla posizione",
+        "sv": "Platsinformation",
+        "no": "Stedsinformasjon",
+        "es": "Información de ubicación",
+        "da": "Placering information",
+        "ru": "Информация о местоположении",
+        "pl": "Informacje o lokalizacji"
       },
       "class": "sensor",
       "capabilities": [
@@ -402,78 +526,6 @@
         "small": "/drivers/location/assets/images/small.png",
         "large": "/drivers/location/assets/images/large.png",
         "xlarge": "/drivers/location/assets/images/xlarge.png"
-      },
-      "energy": {
-        "batteries": [
-          "OTHER"
-        ]
-      },
-      "pair": [
-        {
-          "id": "list_devices",
-          "template": "list_devices",
-          "navigation": {
-            "next": "add_devices"
-          }
-        },
-        {
-          "id": "add_devices",
-          "template": "add_devices",
-          "navigation": {
-            "prev": "list_devices"
-          }
-        }
-      ],
-      "settings": [
-        {
-          "type": "group",
-          "label": {
-            "en": "Assigned to car",
-            "de": "Mit Fahrzeug verknüpft",
-            "nl": "Toegekend aan auto"
-          },
-          "children": [
-            {
-              "id": "car_data_name",
-              "type": "label",
-              "label": {
-                "en": "Name"
-              },
-              "value": ""
-            },
-            {
-              "id": "car_data_vin",
-              "type": "label",
-              "label": {
-                "en": "VIN"
-              },
-              "value": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "media",
-      "name": {
-        "de": "05-Medien-Informationen",
-        "en": "05-Medien-Informationen"
-      },
-      "class": "sensor",
-      "capabilities": [
-        "media_data_refresh",
-        "speaker_artist",
-        "speaker_album",
-        "speaker_track",
-        "speaker_duration",
-        "speaker_position",
-        "alarm_api_error",
-        "media_last_update"
-      ],
-      "images": {
-        "small": "/drivers/media/assets/images/small.png",
-        "large": "/drivers/media/assets/images/large.png",
-        "xlarge": "/drivers/media/assets/images/xlarge.png"
       },
       "energy": {
         "batteries": [

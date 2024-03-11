@@ -1,10 +1,18 @@
 {
   "id": "battery",
-  "name": {
-     "de": "02-Batterie-Informationen hinzufügen",
-     "en": "02-Batterie-Informationen hinzufügen"
-
-      },
+"name": {
+    "de": "Batterie-Informationen",
+    "en": "Battery Information",
+    "nl": "Batterij-informatie",
+    "fr": "Informations sur la batterie",
+    "it": "Informazioni sulla batteria",
+    "sv": "Batteriinformation",
+    "no": "Batteriinformasjon",
+    "es": "Información de la batería",
+    "da": "Batterioplysninger",
+    "ru": "Информация о батарее",
+    "pl": "Informacje o baterii"
+    },
   "class": "sensor",
   "capabilities": [
     "battery_data_refresh",

@@ -7,4 +7,6 @@ Alors j'ai quelque chose pour vous :
 
 Les possibilités sont infinies lorsque vous étendez Homey avec cette fonctionnalité.
 
+Commencez par ajouter le pilote "TeslaLogger". Il est la base de tous les autres pilotes.
+
 Amusez-vous bien avec cette application !

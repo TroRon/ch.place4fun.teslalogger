@@ -1,15 +1,41 @@
 {
   "0.0.1": {
-    "en": "1st Alpha Version",
     "de": "1. Alpha Version",
-    "nl": "1e Alfa Versie",
-    "fr": "1ère Version Alpha",
-    "it": "1a Versione Alpha",
-    "sv": "Första Alfa-versionen",
-    "no": "1. Alfa-versjon",
-    "es": "1ª Versión Alfa",
-    "da": "1. Alpha-version",
-    "ru": "1-я Альфа-версия",
-    "pl": "Pierwsza wersja Alfa"
+    "en": "1. Alpha Version",
+    "nl": "1. Alpha Version",
+    "fr": "1. Alpha Version",
+    "it": "1. Alpha Version",
+    "sv": "1. Alpha Version",
+    "no": "1. Alpha Version",
+    "es": "1. Alpha Version",
+    "da": "1. Alpha Version",
+    "ru": "1. Alpha Version",
+    "pl": "1. Alpha Version"
+  },
+  "0.0.2": {
+    "de": "2. Alpha Version",
+    "en": "2. Alpha Version",
+    "nl": "2. Alpha Version",
+    "fr": "2. Alpha Version",
+    "it": "2. Alpha Version",
+    "sv": "2. Alpha Version",
+    "no": "2. Alpha Version",
+    "es": "2. Alpha Version",
+    "da": "2. Alpha Version",
+    "ru": "2. Alpha Version",
+    "pl": "2. Alpha Version"
+  },
+  "0.0.3": {
+    "de": "3. Alpha Version",
+    "en": "3. Alpha Version",
+    "nl": "3. Alpha Version",
+    "fr": "3. Alpha Version",
+    "it": "3. Alpha Version",
+    "sv": "3. Alpha Version",
+    "no": "3. Alpha Version",
+    "es": "3. Alpha Version",
+    "da": "3. Alpha Version",
+    "ru": "3. Alpha Version",
+    "pl": "3. Alpha Version"
   }
 }

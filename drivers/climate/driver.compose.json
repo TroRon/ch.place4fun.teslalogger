@@ -1,10 +1,18 @@
 {
   "id": "climate",
   "name": {
-     "de": "03-Klima-Informationen",
-     "en": "03-Klima-Informationen"
-
-      },
+    "de": "Klima-Informationen",
+    "en": "Climate Information",
+    "nl": "Klimaat Informatie",
+    "fr": "Informations sur le climat",
+    "it": "Informazioni sul clima",
+    "sv": "Klimatinformation",
+    "no": "Klimainformasjon",
+    "es": "Información del clima",
+    "da": "Klimaoplysninger",
+    "ru": "Информация о климате",
+    "pl": "Informacje o klimacie"
+     },
   "class": "sensor",
   "capabilities": [
     "climate_data_refresh",

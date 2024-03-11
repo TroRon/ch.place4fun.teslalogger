@@ -7,4 +7,6 @@ Udvid Homey med muligheden for at vise og reagere på data fra din TeslaLogger.
 
 Mulighederne er uendelige, når du udvider Homey med denne funktion.
 
+Start med at tilføje driveren "TeslaLogger" som det første. Den er grundlaget for alle andre drivere.
+
 God fornøjelse med denne app.

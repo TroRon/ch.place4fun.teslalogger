@@ -19,6 +19,11 @@ TBD
 
 # Version History
 
+### v0.0.3 (Test-Store-Version)
+- First Alpha Version for Test-Store
+
+### v0.0.2
+- Bugfixes after Rejection
 
 ### v0.0.1
-- Placeholder
+- Initial Alpha Version

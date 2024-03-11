@@ -7,4 +7,6 @@ Erweitern Sie Homey um die Möglichkeit, Daten ihres TeslaLogger anzuzeigen und 
 
 Die Möglichkeiten sind endlos, wenn Sie Homey mit dieser Funktion erweitern.
 
+Beginnen Sie als Erstes damit, den Treiber "TeslaLogger" hinzuzufügen. Er ist die Basis für alle weiteren Treiber.
+
 Viel Spass mit dieser App

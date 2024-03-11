@@ -7,4 +7,6 @@ Amplía Homey con la capacidad de mostrar y reaccionar a los datos de tu TeslaLo
 
 Las posibilidades son infinitas cuando amplías Homey con esta función.
 
+Comienza por agregar el controlador "TeslaLogger". Es la base para todos los demás controladores.
+
 ¡Disfruta de esta aplicación!

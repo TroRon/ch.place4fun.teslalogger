@@ -7,4 +7,6 @@ Breid Homey uit met de mogelijkheid om gegevens van uw TeslaLogger weer te geven
 
 De mogelijkheden zijn eindeloos wanneer u Homey uitbreidt met deze functie.
 
-Veel plezier met deze app.
+Begin met het toevoegen van de "TeslaLogger" driver. Het is de basis voor alle andere drivers.
+
+Veel plezier met deze app!

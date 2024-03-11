@@ -1,5 +1,5 @@
 const Homey = require('homey');
-const PiholeDevice = require('./device'); // Stellen Sie sicher, dass der Pfad korrekt ist.
+const ChildDevice = require('../child_device');
 const CAPABILITY_DEBOUNCE = 500;
 
 //Festlegen einer Map für die Task-Verwaltung
@@ -538,5 +538,4 @@ async _addDeviceInformations(car_name, car_vin) {
     });
   }
 } 
-
 }

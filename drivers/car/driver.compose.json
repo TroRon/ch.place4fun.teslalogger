@@ -1,8 +1,17 @@
 {
   "id": "car",
   "name": {
-     "de": "01-TeslaLogger verbinden",
-     "en": "01-TeslaLogger verbinden"
+    "de": "TeslaLogger",
+    "en": "TeslaLogger",
+    "nl": "TeslaLogger",
+    "fr": "TeslaLogger",
+    "it": "TeslaLogger",
+    "sv": "TeslaLogger",
+    "no": "TeslaLogger",
+    "es": "TeslaLogger",
+    "da": "TeslaLogger",
+    "ru": "TeslaLogger",
+    "pl": "TeslaLogger"
       },
   "class": "sensor",
   "capabilities": [
