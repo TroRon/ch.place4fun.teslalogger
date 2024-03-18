@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "ch.place4fun.teslalogger",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#000000",
@@ -1224,7 +1224,7 @@
         {
           "id": "true",
           "title": {
-            "de": "Eingeschaltet",
+            "de": "Ein",
             "en": "On",
             "nl": "Aan",
             "fr": "Activé",
@@ -1240,7 +1240,7 @@
         {
           "id": "false",
           "title": {
-            "de": "Ausgeschaltet",
+            "de": "Aus",
             "en": "Off",
             "nl": "Uit",
             "fr": "Désactivé",
@@ -1279,7 +1279,7 @@
         {
           "id": "On",
           "title": {
-            "de": "Eingeschaltet",
+            "de": "Ein",
             "en": "On",
             "nl": "Aan",
             "fr": "Activé",
@@ -1295,7 +1295,7 @@
         {
           "id": "Off",
           "title": {
-            "de": "Ausgeschaltet",
+            "de": "Aus",
             "en": "Off",
             "nl": "Uit",
             "fr": "Désactivé",
@@ -1355,7 +1355,7 @@
         {
           "id": "1",
           "title": {
-            "de": "Eingeschaltet",
+            "de": "Ein",
             "en": "On",
             "nl": "Aan",
             "fr": "Activé",
@@ -1371,7 +1371,7 @@
         {
           "id": "0",
           "title": {
-            "de": "Ausgeschaltet",
+            "de": "Aus",
             "en": "Off",
             "nl": "Uit",
             "fr": "Désactivé",
@@ -2076,48 +2076,48 @@
           "id": "1",
           "title": {
             "de": "Stufe 1",
-            "en": "",
-            "nl": "",
-            "fr": "",
-            "it": "",
-            "sv": "",
-            "no": "",
-            "es": "",
-            "da": "",
-            "ru": "",
-            "pl": ""
+            "en": "Level 1",
+            "nl": "Niveau 1",
+            "fr": "Niveau 1",
+            "it": "Livello 1",
+            "sv": "Nivå 1",
+            "no": "Nivå 1",
+            "es": "Nivel 1",
+            "da": "Niveau 1",
+            "ru": "Уровень 1",
+            "pl": "Poziom 1"
           }
         },
         {
           "id": "2",
           "title": {
             "de": "Stufe 2",
-            "en": "",
-            "nl": "",
-            "fr": "",
-            "it": "",
-            "sv": "",
-            "no": "",
-            "es": "",
-            "da": "",
-            "ru": "",
-            "pl": ""
+            "en": "Level 2",
+            "nl": "Niveau 2",
+            "fr": "Niveau 2",
+            "it": "Livello 2",
+            "sv": "Nivå 2",
+            "no": "Nivå 2",
+            "es": "Nivel 2",
+            "da": "Niveau 2",
+            "ru": "Уровень 2",
+            "pl": "Poziom 2"
           }
         },
         {
           "id": "3",
           "title": {
             "de": "Stufe 3",
-            "en": "",
-            "nl": "",
-            "fr": "",
-            "it": "",
-            "sv": "",
-            "no": "",
-            "es": "",
-            "da": "",
-            "ru": "",
-            "pl": ""
+            "en": "Level 3",
+            "nl": "Niveau 3",
+            "fr": "Niveau 3",
+            "it": "Livello 3",
+            "sv": "Nivå 3",
+            "no": "Nivå 3",
+            "es": "Nivel 3",
+            "da": "Niveau 3",
+            "ru": "Уровень 3",
+            "pl": "Poziom 3"
           }
         }
       ]
