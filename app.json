@@ -497,85 +497,6 @@
           ]
         }
       ]
-    },
-    {
-      "id": "location",
-      "name": {
-        "de": "Standort-Informationen",
-        "en": "Location Information",
-        "nl": "Locatie-informatie",
-        "fr": "Informations de localisation",
-        "it": "Informazioni sulla posizione",
-        "sv": "Platsinformation",
-        "no": "Stedsinformasjon",
-        "es": "Información de ubicación",
-        "da": "Placering information",
-        "ru": "Информация о местоположении",
-        "pl": "Informacje o lokalizacji"
-      },
-      "class": "sensor",
-      "capabilities": [
-        "location_data_refresh",
-        "measure_location_latitude",
-        "measure_location_longitude",
-        "location_name",
-        "alarm_api_error",
-        "location_last_update"
-      ],
-      "images": {
-        "small": "/drivers/location/assets/images/small.png",
-        "large": "/drivers/location/assets/images/large.png",
-        "xlarge": "/drivers/location/assets/images/xlarge.png"
-      },
-      "energy": {
-        "batteries": [
-          "OTHER"
-        ]
-      },
-      "pair": [
-        {
-          "id": "list_devices",
-          "template": "list_devices",
-          "navigation": {
-            "next": "add_devices"
-          }
-        },
-        {
-          "id": "add_devices",
-          "template": "add_devices",
-          "navigation": {
-            "prev": "list_devices"
-          }
-        }
-      ],
-      "settings": [
-        {
-          "type": "group",
-          "label": {
-            "en": "Assigned to car",
-            "de": "Mit Fahrzeug verknüpft",
-            "nl": "Toegekend aan auto"
-          },
-          "children": [
-            {
-              "id": "car_data_name",
-              "type": "label",
-              "label": {
-                "en": "Name"
-              },
-              "value": ""
-            },
-            {
-              "id": "car_data_vin",
-              "type": "label",
-              "label": {
-                "en": "VIN"
-              },
-              "value": ""
-            }
-          ]
-        }
-      ]
     }
   ],
   "capabilities": {
@@ -860,6 +781,79 @@
       "uiQuickAction": false,
       "icon": "./assets/capability_icons/last_update.svg"
     },
+    "car_lock_state": {
+      "type": "boolean",
+      "title": {
+        "de": "Verrigelungsstatus",
+        "en": "Lock Status",
+        "nl": "Vergrendelingsstatus",
+        "fr": "État de verrouillage",
+        "it": "Stato di blocco",
+        "sv": "Låsstatus",
+        "no": "Låsstatus",
+        "es": "Estado de bloqueo",
+        "da": "Lås status",
+        "ru": "Статус блокировки",
+        "pl": "Status blokady"
+      },
+      "titleTrue": {
+        "de": "Abgeschlossen",
+        "en": "Locked",
+        "nl": "Vergrendeld",
+        "fr": "Verrouillé",
+        "it": "Chiuso a chiave",
+        "sv": "Låst",
+        "no": "Låst",
+        "es": "Bloqueado",
+        "da": "Låst",
+        "ru": "Закрыто",
+        "pl": "Zamknięte"
+      },
+      "titleFalse": {
+        "de": "Offen",
+        "en": "Open",
+        "nl": "Open",
+        "fr": "Ouvert",
+        "it": "Aperto",
+        "sv": "Öppen",
+        "no": "Åpen",
+        "es": "Abierto",
+        "da": "Åben",
+        "ru": "Открыто",
+        "pl": "Otwarte"
+      },
+      "insightsTitleTrue": {
+        "de": "Fahrzeug verschlossen",
+        "en": "Vehicle locked",
+        "nl": "Voertuig vergrendeld",
+        "fr": "Véhicule verrouillé",
+        "it": "Veicolo chiuso",
+        "sv": "Fordon låst",
+        "no": "Kjøretøy låst",
+        "es": "Vehículo bloqueado",
+        "da": "Køretøj låst",
+        "ru": "Транспортное средство закрыто",
+        "pl": "Pojazd zamknięty"
+      },
+      "insightsTitleFalse": {
+        "de": "Fahrzeug offen",
+        "en": "Vehicle open",
+        "nl": "Voertuig open",
+        "fr": "Véhicule ouvert",
+        "it": "Veicolo aperto",
+        "sv": "Fordon öppen",
+        "no": "Kjøretøy åpent",
+        "es": "Vehículo abierto",
+        "da": "Køretøj åben",
+        "ru": "Транспортное средство открыто",
+        "pl": "Pojazd otwarty"
+      },
+      "insights": true,
+      "getable": true,
+      "setable": true,
+      "uiComponent": "sensor",
+      "icon": "./assets/capability_icons/car_doors_locked.svg"
+    },
     "car_name": {
       "type": "string",
       "title": {
@@ -1025,6 +1019,76 @@
       "setable": true,
       "uiComponent": "sensor",
       "icon": "./assets/capability_icons/car_service_mode.svg"
+    },
+    "car_shift_state": {
+      "type": "enum",
+      "title": {
+        "de": "Schaltzustand",
+        "en": "Shift State",
+        "nl": "Schakelstatus",
+        "fr": "État de la vitesse",
+        "it": "Stato di marcia",
+        "sv": "Växelläge",
+        "no": "Girstatus",
+        "es": "Estado de cambio",
+        "da": "Gearstatus",
+        "ru": "Состояние передачи",
+        "pl": "Stan biegu"
+      },
+      "uiComponent": "sensor",
+      "getable": true,
+      "setable": false,
+      "icon": "./assets/capability_icons/car_shift_state.svg",
+      "values": [
+        {
+          "id": "null",
+          "title": {
+            "de": "Geparkt",
+            "en": "Parked",
+            "nl": "Geparkeerd",
+            "fr": "Stationné",
+            "it": "Parcheggiato",
+            "sv": "Parkerad",
+            "no": "Parkert",
+            "es": "Estacionado",
+            "da": "Parkeret",
+            "ru": "Припарковано",
+            "pl": "Zaparkowany"
+          }
+        },
+        {
+          "id": "reverse",
+          "title": {
+            "de": "Rückwärts",
+            "en": "Reverse",
+            "nl": "Achteruit",
+            "fr": "Marche arrière",
+            "it": "Retromarcia",
+            "sv": "Bakåt",
+            "no": "Revers",
+            "es": "Marcha atrás",
+            "da": "Bakgear",
+            "ru": "Задний ход",
+            "pl": "Wsteczny"
+          }
+        },
+        {
+          "id": "drive",
+          "title": {
+            "de": "Vorwärts",
+            "en": "Drive",
+            "nl": "Vooruit",
+            "fr": "Marche avant",
+            "it": "Avanti",
+            "sv": "Framåt",
+            "no": "Kjøre",
+            "es": "Conducir",
+            "da": "Køre",
+            "ru": "Вперед",
+            "pl": "Jazda"
+          }
+        }
+      ]
     },
     "car_software_version": {
       "type": "string",
@@ -1576,19 +1640,49 @@
         {
           "id": "1",
           "title": {
-            "en": "1"
+            "de": "Stufe 1",
+            "en": "Level 1",
+            "nl": "Niveau 1",
+            "fr": "Niveau 1",
+            "it": "Livello 1",
+            "sv": "Nivå 1",
+            "no": "Nivå 1",
+            "es": "Nivel 1",
+            "da": "Niveau 1",
+            "ru": "Уровень 1",
+            "pl": "Poziom 1"
           }
         },
         {
           "id": "2",
           "title": {
-            "en": "2"
+            "de": "Stufe 2",
+            "en": "Level 2",
+            "nl": "Niveau 2",
+            "fr": "Niveau 2",
+            "it": "Livello 2",
+            "sv": "Nivå 2",
+            "no": "Nivå 2",
+            "es": "Nivel 2",
+            "da": "Niveau 2",
+            "ru": "Уровень 2",
+            "pl": "Poziom 2"
           }
         },
         {
           "id": "3",
           "title": {
-            "en": "3"
+            "de": "Stufe 3",
+            "en": "Level 3",
+            "nl": "Niveau 3",
+            "fr": "Niveau 3",
+            "it": "Livello 3",
+            "sv": "Nivå 3",
+            "no": "Nivå 3",
+            "es": "Nivel 3",
+            "da": "Niveau 3",
+            "ru": "Уровень 3",
+            "pl": "Poziom 3"
           }
         }
       ]
@@ -1633,19 +1727,49 @@
         {
           "id": "1",
           "title": {
-            "en": "1"
+            "de": "Stufe 1",
+            "en": "Level 1",
+            "nl": "Niveau 1",
+            "fr": "Niveau 1",
+            "it": "Livello 1",
+            "sv": "Nivå 1",
+            "no": "Nivå 1",
+            "es": "Nivel 1",
+            "da": "Niveau 1",
+            "ru": "Уровень 1",
+            "pl": "Poziom 1"
           }
         },
         {
           "id": "2",
           "title": {
-            "en": "2"
+            "de": "Stufe 2",
+            "en": "Level 2",
+            "nl": "Niveau 2",
+            "fr": "Niveau 2",
+            "it": "Livello 2",
+            "sv": "Nivå 2",
+            "no": "Nivå 2",
+            "es": "Nivel 2",
+            "da": "Niveau 2",
+            "ru": "Уровень 2",
+            "pl": "Poziom 2"
           }
         },
         {
           "id": "3",
           "title": {
-            "en": "3"
+            "de": "Stufe 3",
+            "en": "Level 3",
+            "nl": "Niveau 3",
+            "fr": "Niveau 3",
+            "it": "Livello 3",
+            "sv": "Nivå 3",
+            "no": "Nivå 3",
+            "es": "Nivel 3",
+            "da": "Niveau 3",
+            "ru": "Уровень 3",
+            "pl": "Poziom 3"
           }
         }
       ]
@@ -1690,19 +1814,49 @@
         {
           "id": "1",
           "title": {
-            "en": "1"
+            "de": "Stufe 1",
+            "en": "Level 1",
+            "nl": "Niveau 1",
+            "fr": "Niveau 1",
+            "it": "Livello 1",
+            "sv": "Nivå 1",
+            "no": "Nivå 1",
+            "es": "Nivel 1",
+            "da": "Niveau 1",
+            "ru": "Уровень 1",
+            "pl": "Poziom 1"
           }
         },
         {
           "id": "2",
           "title": {
-            "en": "2"
+            "de": "Stufe 2",
+            "en": "Level 2",
+            "nl": "Niveau 2",
+            "fr": "Niveau 2",
+            "it": "Livello 2",
+            "sv": "Nivå 2",
+            "no": "Nivå 2",
+            "es": "Nivel 2",
+            "da": "Niveau 2",
+            "ru": "Уровень 2",
+            "pl": "Poziom 2"
           }
         },
         {
           "id": "3",
           "title": {
-            "en": "3"
+            "de": "Stufe 3",
+            "en": "Level 3",
+            "nl": "Niveau 3",
+            "fr": "Niveau 3",
+            "it": "Livello 3",
+            "sv": "Nivå 3",
+            "no": "Nivå 3",
+            "es": "Nivel 3",
+            "da": "Niveau 3",
+            "ru": "Уровень 3",
+            "pl": "Poziom 3"
           }
         }
       ]
@@ -1747,19 +1901,49 @@
         {
           "id": "1",
           "title": {
-            "en": "1"
+            "de": "Stufe 1",
+            "en": "Level 1",
+            "nl": "Niveau 1",
+            "fr": "Niveau 1",
+            "it": "Livello 1",
+            "sv": "Nivå 1",
+            "no": "Nivå 1",
+            "es": "Nivel 1",
+            "da": "Niveau 1",
+            "ru": "Уровень 1",
+            "pl": "Poziom 1"
           }
         },
         {
           "id": "2",
           "title": {
-            "en": "2"
+            "de": "Stufe 2",
+            "en": "Level 2",
+            "nl": "Niveau 2",
+            "fr": "Niveau 2",
+            "it": "Livello 2",
+            "sv": "Nivå 2",
+            "no": "Nivå 2",
+            "es": "Nivel 2",
+            "da": "Niveau 2",
+            "ru": "Уровень 2",
+            "pl": "Poziom 2"
           }
         },
         {
           "id": "3",
           "title": {
-            "en": "3"
+            "de": "Stufe 3",
+            "en": "Level 3",
+            "nl": "Niveau 3",
+            "fr": "Niveau 3",
+            "it": "Livello 3",
+            "sv": "Nivå 3",
+            "no": "Nivå 3",
+            "es": "Nivel 3",
+            "da": "Niveau 3",
+            "ru": "Уровень 3",
+            "pl": "Poziom 3"
           }
         }
       ]
@@ -1804,19 +1988,49 @@
         {
           "id": "1",
           "title": {
-            "en": "1"
+            "de": "Stufe 1",
+            "en": "Level 1",
+            "nl": "Niveau 1",
+            "fr": "Niveau 1",
+            "it": "Livello 1",
+            "sv": "Nivå 1",
+            "no": "Nivå 1",
+            "es": "Nivel 1",
+            "da": "Niveau 1",
+            "ru": "Уровень 1",
+            "pl": "Poziom 1"
           }
         },
         {
           "id": "2",
           "title": {
-            "en": "2"
+            "de": "Stufe 2",
+            "en": "Level 2",
+            "nl": "Niveau 2",
+            "fr": "Niveau 2",
+            "it": "Livello 2",
+            "sv": "Nivå 2",
+            "no": "Nivå 2",
+            "es": "Nivel 2",
+            "da": "Niveau 2",
+            "ru": "Уровень 2",
+            "pl": "Poziom 2"
           }
         },
         {
           "id": "3",
           "title": {
-            "en": "3"
+            "de": "Stufe 3",
+            "en": "Level 3",
+            "nl": "Niveau 3",
+            "fr": "Niveau 3",
+            "it": "Livello 3",
+            "sv": "Nivå 3",
+            "no": "Nivå 3",
+            "es": "Nivel 3",
+            "da": "Niveau 3",
+            "ru": "Уровень 3",
+            "pl": "Poziom 3"
           }
         }
       ]
@@ -1861,19 +2075,49 @@
         {
           "id": "1",
           "title": {
-            "en": "1"
+            "de": "Stufe 1",
+            "en": "",
+            "nl": "",
+            "fr": "",
+            "it": "",
+            "sv": "",
+            "no": "",
+            "es": "",
+            "da": "",
+            "ru": "",
+            "pl": ""
           }
         },
         {
           "id": "2",
           "title": {
-            "en": "2"
+            "de": "Stufe 2",
+            "en": "",
+            "nl": "",
+            "fr": "",
+            "it": "",
+            "sv": "",
+            "no": "",
+            "es": "",
+            "da": "",
+            "ru": "",
+            "pl": ""
           }
         },
         {
           "id": "3",
           "title": {
-            "en": "3"
+            "de": "Stufe 3",
+            "en": "",
+            "nl": "",
+            "fr": "",
+            "it": "",
+            "sv": "",
+            "no": "",
+            "es": "",
+            "da": "",
+            "ru": "",
+            "pl": ""
           }
         }
       ]

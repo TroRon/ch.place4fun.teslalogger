@@ -19,11 +19,14 @@ TBD
 
 # Version History
 
-### v0.0.3 (Test-Store-Version)
+### 1.0.0 (Store Release Version)
+- Release Version
+
+### 0.0.3 (Test-Store-Version)
 - First Alpha Version for Test-Store
 
-### v0.0.2
+### 0.0.2
 - Bugfixes after Rejection
 
-### v0.0.1
+### 0.0.1
 - Initial Alpha Version

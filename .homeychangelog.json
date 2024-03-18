@@ -37,5 +37,18 @@
     "da": "3. Alpha Version",
     "ru": "3. Alpha Version",
     "pl": "3. Alpha Version"
+  },
+  "1.0.0": {
+    "de": "Freigabe Version",
+    "en": "Release Version",
+    "nl": "Releaseversie",
+    "fr": "Version de sortie",
+    "it": "Versione di rilascio",
+    "sv": "Versionsversion",
+    "no": "Utgaveversjon",
+    "es": "Versión de lanzamiento",
+    "da": "Udgivelsesversion",
+    "ru": "Версия выпуска",
+    "pl": "Wersja wydania"
   }
 }

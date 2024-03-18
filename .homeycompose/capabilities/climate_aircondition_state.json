@@ -22,7 +22,7 @@
       {
         "id": "true",
         "title": {
-          "de": "Eingeschaltet",
+          "de": "Ein",
           "en": "On",
           "nl": "Aan",
           "fr": "Activé",
@@ -38,7 +38,7 @@
       {
         "id": "false",
        "title": {
-          "de": "Ausgeschaltet",
+          "de": "Aus",
           "en": "Off",
           "nl": "Uit",
           "fr": "Désactivé",

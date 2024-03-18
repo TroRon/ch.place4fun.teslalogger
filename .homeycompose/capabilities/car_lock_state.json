@@ -1,0 +1,73 @@
+{
+  "type": "boolean",
+  "title": {
+    "de": "Verrigelungsstatus",
+    "en": "Lock Status",
+    "nl": "Vergrendelingsstatus",
+    "fr": "État de verrouillage",
+    "it": "Stato di blocco",
+    "sv": "Låsstatus",
+    "no": "Låsstatus",
+    "es": "Estado de bloqueo",
+    "da": "Lås status",
+    "ru": "Статус блокировки",
+    "pl": "Status blokady"
+  },
+  "titleTrue":{
+    "de": "Abgeschlossen",
+    "en": "Locked",
+    "nl": "Vergrendeld",
+    "fr": "Verrouillé",
+    "it": "Chiuso a chiave",
+    "sv": "Låst",
+    "no": "Låst",
+    "es": "Bloqueado",
+    "da": "Låst",
+    "ru": "Закрыто",
+    "pl": "Zamknięte"
+  },
+  "titleFalse":{
+    "de": "Offen",
+    "en": "Open",
+    "nl": "Open",
+    "fr": "Ouvert",
+    "it": "Aperto",
+    "sv": "Öppen",
+    "no": "Åpen",
+    "es": "Abierto",
+    "da": "Åben",
+    "ru": "Открыто",
+    "pl": "Otwarte"
+  },
+  "insightsTitleTrue":{
+    "de": "Fahrzeug verschlossen",
+    "en": "Vehicle locked",
+    "nl": "Voertuig vergrendeld",
+    "fr": "Véhicule verrouillé",
+    "it": "Veicolo chiuso",
+    "sv": "Fordon låst",
+    "no": "Kjøretøy låst",
+    "es": "Vehículo bloqueado",
+    "da": "Køretøj låst",
+    "ru": "Транспортное средство закрыто",
+    "pl": "Pojazd zamknięty"
+  },
+  "insightsTitleFalse":{
+    "de": "Fahrzeug offen",
+    "en": "Vehicle open",
+    "nl": "Voertuig open",
+    "fr": "Véhicule ouvert",
+    "it": "Veicolo aperto",
+    "sv": "Fordon öppen",
+    "no": "Kjøretøy åpent",
+    "es": "Vehículo abierto",
+    "da": "Køretøj åben",
+    "ru": "Транспортное средство открыто",
+    "pl": "Pojazd otwarty"
+  },
+  "insights": true,
+  "getable": true,
+  "setable": true,
+  "uiComponent": "sensor",
+  "icon": "./assets/capability_icons/car_doors_locked.svg"
+}

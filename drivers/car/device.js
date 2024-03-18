@@ -326,7 +326,10 @@ async _updateDeviceData(url) {
       let vehicle_tpms_fr = data.response.vehicle_state.tpms_pressure_fr
       let vehicle_tpms_rl = data.response.vehicle_state.tpms_pressure_rl
       let vehicle_tpms_rr = data.response.vehicle_state.tpms_pressure_rr
-  
+      let vehicle_shift_state = data.response.drive_state.shift_state
+      let vehicle_locked = data.response.vehicle_state.locked
+      let vehicle_user_present = data.response.vehicle_state.is_user_present
+
       //Nachführen der VIN
       this._addDeviceInformations(vehicle_name, vehicle_vin)
 
@@ -343,6 +346,9 @@ async _updateDeviceData(url) {
       this.log('Allgemeine Fahrzeugdaten')
       this.log('Fahrzeugname:',vehicle_name)
       this.log('VIN:',vehicle_vin)
+      this.log('Locked?',vehicle_locked)
+      this.log('Shift State:',vehicle_shift_state)
+      this.log('User Present?',vehicle_user_present)
       this.log('Software:',vehicle_version)
       this.log('Status:',vehicle_state)
       this.log('Odometer:',vehicle_odometer, 'km')
@@ -437,6 +443,21 @@ async _updateDeviceData(url) {
         this.log('Fehler --> measure_car_tpms_pressure_rr ist nicht definiert');
         this.setCapabilityValue('measure_car_tpms_pressure_rr', 'n/a');
       }
+
+//      if (typeof vehicle_locked !== 'undefined') {
+//        this.setCapabilityValue('car_lock_state', vehicle_locked);
+//      } else {
+//        this.log('Fehler --> vehicle_locked ist nicht definiert');
+//        this.setCapabilityValue('car_lock_state', 'n/a');
+//      }
+
+//      if (typeof vehicle_shift_state !== 'undefined') {
+//        this.setCapabilityValue('car_shift_state', vehicle_shift_state);
+//      } else {
+//        this.log('Fehler --> vehicle_shift_state ist nicht definiert');
+//        this.setCapabilityValue('car_shift_state', 'n/a');
+//      }
+
     // Capabilities für den Rest setzen
     this.setCapabilityValue('alarm_api_error', false);
 

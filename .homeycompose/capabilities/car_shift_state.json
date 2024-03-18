@@ -1,0 +1,70 @@
+{
+  "type": "enum",
+  "title": {
+    "de": "Schaltzustand",
+    "en": "Shift State",
+    "nl": "Schakelstatus",
+    "fr": "État de la vitesse",
+    "it": "Stato di marcia",
+    "sv": "Växelläge",
+    "no": "Girstatus",
+    "es": "Estado de cambio",
+    "da": "Gearstatus",
+    "ru": "Состояние передачи",
+    "pl": "Stan biegu"
+  },
+  "uiComponent": "sensor",
+  "getable": true,
+  "setable": false,
+  "icon": "./assets/capability_icons/car_shift_state.svg",
+  "values": [
+    {
+      "id": "null",
+      "title": {
+        "de": "Geparkt",
+        "en": "Parked",
+        "nl": "Geparkeerd",
+        "fr": "Stationné",
+        "it": "Parcheggiato",
+        "sv": "Parkerad",
+        "no": "Parkert",
+        "es": "Estacionado",
+        "da": "Parkeret",
+        "ru": "Припарковано",
+        "pl": "Zaparkowany"
+      }
+    },
+    {
+      "id": "reverse",
+      "title": {
+        "de": "Rückwärts",
+        "en": "Reverse",
+        "nl": "Achteruit",
+        "fr": "Marche arrière",
+        "it": "Retromarcia",
+        "sv": "Bakåt",
+        "no": "Revers",
+        "es": "Marcha atrás",
+        "da": "Bakgear",
+        "ru": "Задний ход",
+        "pl": "Wsteczny"
+      }
+    },
+    {
+      "id": "drive",
+      "title": {
+        "de": "Vorwärts",
+        "en": "Drive",
+        "nl": "Vooruit",
+        "fr": "Marche avant",
+        "it": "Avanti",
+        "sv": "Framåt",
+        "no": "Kjøre",
+        "es": "Conducir",
+        "da": "Køre",
+        "ru": "Вперед",
+        "pl": "Jazda"
+      }
+    }
+  ]
+}
